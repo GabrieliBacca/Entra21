@@ -7,4 +7,4 @@ const prompt = r()
 let num = Number (prompt("Digite um numero: "))
 let raiz = Math.sqrt(num)
 
-console.log("Raiz quadrada: " + raiz)
+console.log(`Raiz quadrada de ${num}: ` + raiz)

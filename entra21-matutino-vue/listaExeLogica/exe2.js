@@ -6,4 +6,4 @@ const prompt = pacote()
 
 let num1 = Number (prompt("Digite um numero: "))
 
-console.log("Resultado da multiplicação por 10: " +(num1 *10))
+console.log(`Resultado da multiplicação de ${num1} por 10: ` +(num1 *10))
