@@ -1,5 +1,4 @@
 //Operações Basicas
-
 let soma = 10+30
 let subtracao = 10-30
 let multiplicacao = 10*30

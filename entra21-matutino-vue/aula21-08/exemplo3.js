@@ -2,6 +2,5 @@
 const pacote = require('prompt-sync')
 const prompt = pacote()
 
-
 let idade = prompt('Digite sua idade: ')
 console.log("Sua idade é: " + idade)
