@@ -1,7 +1,7 @@
 const pacote = require('prompt-sync')
 const prompt = pacote()
 
-let number = Number(prompt("Digite um numero: "))
+let numero = Number(prompt("Digite um numero: "))
 
 if(numero == 1){
     console.log('Domingo')
@@ -13,4 +13,8 @@ if(numero == 1){
     console.log("Quarta")
 }else if(numero==5){
     console.log("Quinta")
+}else if(numero==6){
+    console.log("Sexta")
+}else if(numero==7){
+    console.log("Sbado")
 }
