@@ -12,7 +12,7 @@ if (salario > 900 && salario <=1500) {
 ir =  salario * 0.05
 console.log(`(-) IR (5%) = ${ir}`)
 } 
-else if (salario > 1500 && salario <=2500 ){
+else if (salario <=2500 ){
 ir = salario * 0.1
 console.log(`(-) IR (10%) = ${ir}`)
 }
