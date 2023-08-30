@@ -2,7 +2,7 @@ const prompt = require('prompt-sync')()
 
 let nomes = []
 let i = 0
-while(i < 200){
+while(i < 4){
     nomes[i] = prompt('Digite um nome: ')
     i++
 }
