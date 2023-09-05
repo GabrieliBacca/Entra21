@@ -1,3 +1,4 @@
+/*
 prompt = require('prompt-sync') ()
 let palavra = 'abacaxi'
 let i = 0
@@ -11,3 +12,15 @@ while(palpite != palavra && i < 5){
     
 }
 console.log(palpite == palavra ? "Palavra secreta correta!" : "Terminou suas tentativas")
+*/
+
+prompt = require('prompt-sync') ()
+let palavra = 'abacaxi'
+
+for(let tentativas = 5; tentativas > 0; tentativas--) {
+    console.log(`Tentativas restante:  ${tentativas}`)
+    if(prompt("Digite uma palavra: ") == palavra){
+        console.log("Voce acertou!")
+        break
+    }
+}
