@@ -1,7 +1,11 @@
-const prompt = require('prompt-sync')()
-let max = Number.MIN_SAFE_INTEGER
+const prompt = require('prompt-sync')();
+let max = Number.MIN_SAFE_INTEGER;
+let num
 
-let i=0
-while(i<5){
-    l
+for (let i = 0; i < 5; i++) {
+    num = Number(prompt(`Digite o ${i + 1}º número: `));
+    if (num > max) {
+        max = num;
+    }
 }
+console.log(`O maior número é: ${max}`);
