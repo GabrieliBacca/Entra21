@@ -10,6 +10,6 @@ for (let i = 0; i < num.length; i++) {
     soma += num[i];
 }
 
-const media = soma / num.length;
+let media = soma / num.length;
 
 console.log(`A média é: ${media}`);
