@@ -13,5 +13,6 @@ Lojas Quase Dois - Tabela de preços
 prompt = require('prompt-sync') ()
 let valor = 0
 for(let i=0; i<50; i++){
-    console.log(`${i+1} - `)
+    let tabela = valor+= 1.99
+    console.log(`${i+1} - ${tabela.toFixed(2)}`)
 }
