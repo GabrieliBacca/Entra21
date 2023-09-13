@@ -1,0 +1,38 @@
+Lista de Exercícios Dupla - Function
+Crie uma função que imprima "Olá, mundo!" na tela.
+Crie uma função que receba um número como parâmetro e retorne o seu dobro.
+Crie uma função que receba dois números como parâmetros e retorne a soma deles.
+Crie uma função que receba uma string como parâmetro e retorne a quantidade de caracteres dela.
+
+Crie uma função que receba uma string como parâmetro e retorne a primeira letra dela.
+
+Crie uma função que receba uma string como parâmetro e retorne a última letra dela.
+
+Crie uma função que receba uma string como parâmetro e retorne a string invertida.
+
+Crie uma função que receba uma string como parâmetro e retorne a string sem espaços em branco.
+
+Crie uma função que receba um número como parâmetro e retorne o seu quadrado.
+
+
+Exercícios difíceis:
+Crie uma função que receba um número como parâmetro e retorne true se o número for primo e false se não for.
+Crie uma função que receba uma string como parâmetro e retorne true se a string for um palíndromo e false se não for.
+Exercicios For e While
+1. 	Desenvolver um programa para verificar a nota do aluno em uma prova com 10 questões, o programa deve perguntar ao aluno a resposta de cada questão e ao final comparar com o gabarito da prova e assim calcular o total de acertos e a nota (atribuir 1 ponto por resposta certa). Após cada aluno utilizar o sistema deve ser feita uma pergunta se outro aluno vai utilizar o sistema. Após todos os alunos terem respondido informar:
+        Maior e Menor Acerto;
+        Total de Alunos que utilizaram o sistema;
+A Média das Notas da Turma.
+ Gabarito da Prova:
+ 
+01 - A
+02 - B
+03 - C
+04 - D
+05 - E
+06 - E
+07 - D
+08 - C
+09 - B
+        10 - A
+ Após concluir isto você poderia incrementar o programa permitindo que o professor digite o gabarito da prova antes dos alunos usarem o programa.
