@@ -6,7 +6,7 @@ hello()
 
 //Crie uma função que receba um número como parâmetro e retorne o seu dobro.
 function dobro(n1){
-    return n1*n1
+    return n1*2
 }
 console.log(dobro(2))
 
@@ -19,9 +19,8 @@ console.log(soma(2,9))
 
 //Crie uma função que receba uma string como parâmetro e retorne a quantidade de caracteres dela.
 
-function qtdCaracter(string) {
-    let nome = string.length
-    return nome
+function qtdCaracter(nome) {
+    return nome.length
 }
 
 console.log(qtdCaracter('gabi'));
