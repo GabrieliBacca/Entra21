@@ -1,0 +1,39 @@
+.titulo{
+    color: coral;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.fire:hover{
+    background-color: red;
+    transform: scale(1.1);
+    color: rgb(238, 235, 235);
+    transition: 1s;
+    animation: animate 0.1s linear infinite;
+}
+
+.weight:hover{
+    background-color: rgb(124, 189, 104);
+    transform: scale(5.1);
+    color: rgb(238, 235, 235);
+    transition: 1s;
+}
+
+.water:hover{
+    background-color: rgb(8, 17, 145);
+    transform: scale(1);
+    color: rgb(238, 235, 235);
+    transition: 1s;
+}
+
+@keyframes animate{
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 0.7;
+    }
+    100%{
+      opacity: 0;
+    }
+}
