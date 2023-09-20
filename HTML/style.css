@@ -1,39 +1,128 @@
-.titulo{
-    color: coral;
-    font-size: 40px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ul li {
+  list-style: none; 
+}
+.container{
+  text-align: center;
+  background: linear-gradient(to right, #6ea9da54, #76a4c99f,#b4bfc9,#81b0d6,#6097c4); /* De vermelho (#ff0000) para verde (#00ff00) da esquerda para a direita */
+
 }
 
-.fire:hover{
-    background-color: red;
-    transform: scale(1.1);
-    color: rgb(238, 235, 235);
-    transition: 1s;
-    animation: animate 0.1s linear infinite;
+h1{
+  font-size: 30px;
+}
+.titulo {
+  font-size: 40px;
 }
 
-.weight:hover{
-    background-color: rgb(124, 189, 104);
-    transform: scale(5.1);
-    color: rgb(238, 235, 235);
-    transition: 1s;
+.cha {
+  color: rgb(170, 51, 8);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.water:hover{
-    background-color: rgb(8, 17, 145);
-    transform: scale(1);
-    color: rgb(238, 235, 235);
-    transition: 1s;
+.fly:hover {
+  color: cornflowerblue;
+  background-color: azure;
+  font-size: 25px;
+  transform: translateY(0px);
+  animation: float 2s ease-in-out infinite;
 }
 
-@keyframes animate{
-    0%{
-      opacity: 0;
-    }
-    50%{
-      opacity: 0.7;
-    }
-    100%{
-      opacity: 0;
-    }
+.fire:hover {
+  background-color: red;
+  transform: scale(1.1);
+  color: rgb(238, 235, 235);
+  transition: 1s;
+  animation: animate 0.1s linear infinite;
+  font-size: 24px;
 }
+
+.blaze:hover{
+  background-color: rgb(235, 140, 140);
+  animation: animate 0.5s linear infinite;
+  color: rgb(51, 6, 6);
+  font-size: 20px;
+}
+
+.blaze:hover::before{
+  content: "🔥"; 
+  color: red; 
+}
+
+.blaze:hover::after{
+  content: "🔥"; 
+  color: red; 
+}
+
+.weight:hover {
+  background-color: rgb(124, 189, 104);
+  transform: scale(5.1);
+  color: rgb(238, 235, 235);
+  transition: 1s;
+}
+
+.squi {
+  color: rgb(94, 94, 165);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.heigth:hover{
+  background-color: rgb(73, 49, 211);
+  transform: scale(5.1);
+  color: rgb(238, 235, 235);
+  transition: 1s;
+}
+
+
+.water:hover {
+  background-color: rgb(8, 17, 145);
+  transform: scale(1);
+  color: rgb(238, 235, 235);
+  transform: translateY(0px);
+  animation: float 8s ease-in-out infinite;
+}
+
+.water:hover::before{
+  content: "💦";
+}
+
+.water:hover::after{
+  content: "💦";
+}
+
+.torrent {
+  transition: transform 5s, background-color 0.2s;
+}
+
+.torrent:hover {
+  background-color: rgb(141, 124, 236);
+  transform: scale(1.2);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-500px);
+  }
+
+  100% {
+    transform: translateY(500px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
