@@ -1,22 +1,45 @@
+html::before{
+  background-image: url(img/EYtf32bXQAYQEE7.jfif);
+  background-attachment: fixed;
+  content: "";
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.meu-elemento-personalizado {
+  cursor: url('img/png.cur'), auto;
+}
+
 ul li {
-  list-style: none; 
+  list-style: none;
 }
-.container{
+
+.container {
   text-align: center;
-  background: linear-gradient(to right, #6ea9da54, #76a4c99f,#b4bfc9,#81b0d6,#6097c4); /* De vermelho (#ff0000) para verde (#00ff00) da esquerda para a direita */
-
+  font-family: 'Press Start 2P', cursive;
 }
 
-h1{
-  font-size: 30px;
+img {
+  filter: drop-shadow(4px 4px 12px black);
 }
+
 .titulo {
   font-size: 40px;
+  color: rgb(238, 255, 0);
+  text-shadow: 
+    -1px -1px 0 rgb(214, 104, 0), 
+    1px -1px 0 rgb(250, 162, 104),  
+    -1px 1px 0 rgb(235, 104, 53),  
+    1px 1px 0 rgb(228, 164, 69);   
 }
 
-.cha {
-  color: rgb(170, 51, 8);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.pokemons {
+  color: rgb(0, 0, 56);
 }
 
 .fly:hover {
@@ -36,21 +59,21 @@ h1{
   font-size: 24px;
 }
 
-.blaze:hover{
+.blaze:hover {
   background-color: rgb(235, 140, 140);
   animation: animate 0.5s linear infinite;
   color: rgb(51, 6, 6);
   font-size: 20px;
 }
 
-.blaze:hover::before{
-  content: "🔥"; 
-  color: red; 
+.blaze:hover::before {
+  content: "🔥";
+  color: red;
 }
 
-.blaze:hover::after{
-  content: "🔥"; 
-  color: red; 
+.blaze:hover::after {
+  content: "🔥";
+  color: red;
 }
 
 .weight:hover {
@@ -60,12 +83,9 @@ h1{
   transition: 1s;
 }
 
-.squi {
-  color: rgb(94, 94, 165);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 
-.heigth:hover{
+
+.heigth:hover {
   background-color: rgb(73, 49, 211);
   transform: scale(5.1);
   color: rgb(238, 235, 235);
@@ -81,11 +101,11 @@ h1{
   animation: float 8s ease-in-out infinite;
 }
 
-.water:hover::before{
+.water:hover::before {
   content: "💦";
 }
 
-.water:hover::after{
+.water:hover::after {
   content: "💦";
 }
 
@@ -125,4 +145,3 @@ h1{
     opacity: 0;
   }
 }
-
