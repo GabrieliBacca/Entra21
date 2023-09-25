@@ -34,6 +34,30 @@ input[type="text"], input[type="number"], input[type="date"]{
     
 }
 
+.voltarBtn{
+    background-color: rgb(22, 22, 119) ;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+
+input[type="submit"]{
+    background-color: rgb(22, 22, 119);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; 
+
+}
+
 /*
 input[type="text"], input[type="number"]
 {
@@ -45,14 +69,6 @@ input[type="text"], input[type="number"]
 
 }
 
-input[type="submit"]{
-    background-color: #8b0000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 10px 20px;
-}
 
 input[type = "submit"]:hover{
     background-color: #8b3333;

@@ -1,0 +1,66 @@
+.quadrado{
+    width: 200px;
+    height: 200px;
+    background-color: violet;
+    animation: scale-down-center  4s linear;
+
+    /* ease-out devagar 
+    ease-in-out começa rapido e termina devagar*/
+
+    /* forwards fica na posição final
+    infite fica rodando infinatamnete */
+}
+@keyframes animacao1{
+    from{
+        
+    }to{
+        margin-left: 500px;
+        background-color: blue;
+    }
+}
+@keyframes animacao2 {
+    10%{
+        margin-top: 100px;
+    }
+    30%{
+        margin-top: 80px;
+    }
+    50%{
+        margin-top: 50px;
+        border-radius: 50%;
+    }
+    100%{
+        background-color: yellow;
+    }
+}
+@keyframes animacao3 {
+    20%{
+        margin-left: 500px;
+        margin: 0;
+    }
+    40%{
+        margin-top: 500px;
+        margin-left: 500px;
+    }
+}
+
+@-webkit-keyframes scale-down-center {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+  }
+  @keyframes scale-down-center {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+  }
