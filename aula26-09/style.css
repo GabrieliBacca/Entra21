@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+}
+header{
+    background-color: orange;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: beige;
+    width: 300px;
+    align-items: flex-start;
+    
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    margin: 0 10px;
+}
+
+
+.container{
+    height: 600px;
+    width: 600px;
+    background-color: rgba(252, 252, 252, 0.842);
+    display: flex;
+    /* justify content alinha no eixo x
+    space-around mesmo espaco ao redor dos dois
+    between espaço entre eles
+    evenly espaço igual ao redor de tudo*/
+    justify-content: space-around ; 
+}
+
+.q1{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(241, 104, 127);
+}
+
+.q2{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
