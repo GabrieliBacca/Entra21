@@ -1,0 +1,29 @@
+.container{
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #f5d5ff52;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+}
+
+form{
+    margin: 20px;
+}
+
+label{
+    display: block; /*contrario do flex*/
+    margin-bottom: 10px;
+   
+}
+
+input[type="text"], input[type="number"]
+{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
