@@ -37,3 +37,38 @@
     background-color: rgb(55, 218, 169);
     animation: animacao3 5s infinite;
 }
+
+
+/*
+
+  <div class="quadrado vermelho">
+            
+    </div>
+
+    <div class="quadrado azul circulo">
+            
+    </div>
+
+    <div class="quadrado verde">
+            
+    </div>
+
+.quadrado{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+
+  .azul{
+    background-color: blue;
+  }
+  .vermelho{
+    background-color: red;
+  }
+  .verde{
+    background-color: green;
+  }
+  .circulo{
+    border-radius: 50%;
+  }
+*/

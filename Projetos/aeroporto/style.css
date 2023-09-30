@@ -36,25 +36,6 @@ header{
     font-size: 30px;
   }
 
-  .quadrado{
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-  }
-
-  .azul{
-    background-color: blue;
-  }
-  .vermelho{
-    background-color: red;
-  }
-  .verde{
-    background-color: green;
-  }
-  .circulo{
-    border-radius: 50%;
-  }
-
 .destino{
   max-width: 900px;
   margin: 100px auto;
