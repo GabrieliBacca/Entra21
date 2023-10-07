@@ -1,17 +1,21 @@
 /* listas after e before */
 
+a{
+    text-decoration: none;
+}
+
 a:hover {
     color: black;
 }
 
 a::after {
-    content: 'link';
+    content: '[link]';
+    font-size: small;
     color: red;
-    text-decoration: none;
 }
 
 .especial::before {
-    content: '✉';
+    content: ' 🎥';
 }
 
 /* Linhas do texto */
@@ -20,16 +24,17 @@ p::first-line {
     text-transform: uppercase;
 }
 
+
 p::first-letter {
     font-size: 24px;
-    color: purple;
+    color: #ffcc00;
 }
 
 /* PlaceHolder */
 input::placeholder {
-    color: rgb(241, 32, 32);
+    color: rgb(114, 0, 0);
     /* Cor do texto de espaço reservado */
-    font-style: italic;
+    font-style: normal;
     /* Estilo de fonte (por exemplo, itálico) */
 }
 
@@ -39,8 +44,8 @@ input::placeholder {
     color: rebeccapurple; 
   }
 
-::cue {
-    color: #FF0000; /* Define a cor das legendas para vermelho */
-    font-size: 16px; /* Define o tamanho da fonte das legendas */
-    font-weight: bold; /* Define o peso da fonte das legendas como negrito */
+/*mudda o icone da lista*/
+li::marker {
+    color: red;
   }
+  

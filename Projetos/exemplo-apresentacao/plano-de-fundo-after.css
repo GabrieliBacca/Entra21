@@ -1,20 +1,12 @@
-.container {
-    position: relative;
-  }
-  
-  p{
-    font-size: 200px;
-  }
-  .container::after {
-    content: ""; /* Deve haver algum conteúdo para que o pseudo-elemento seja visível */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('img/plano.png'); /* Substitua 'sua-imagem.jpg' pela URL da sua imagem */
-    background-size: cover; /* Você pode ajustar a propriedade background-size conforme necessário */
-   
-    z-index: -1; /* Coloque o pseudo-elemento atrás do conteúdo principal */
-  }
-  
+
+.elemento::after {
+  content: ""; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1d77ae; 
+  opacity: 0.5; 
+  z-index: -1; 
+}
