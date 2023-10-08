@@ -1,43 +1,35 @@
-prompt = require('prompt-sync') ()
 
-const deuses = ['Afrodite', 'Apolo','Ares' ,'Ártemis', 'Atena', 'Deméter', 'Dionísio', 'Eros','Hades',
-'Hélios', 'Hermes' ,'Hera','Héstia','Horas ', 'Mnemósine ', 'Perséfone' , 'Poseidon ', 'Selene ', 'Têmis', 'Zeus']
- 
+prompt = require('prompt-sync')()
+const deusesMitologiaGrega = [
+  "ZEUS", "APOLO", "AFRODITE", "ATHENA", "HADES", "POSEIDON", "DIONYSUS", "HERCULES",
+  "ARTEMIS", "ARES", "HERMES", "DEMETER", "HERA", "PERSEUS", "MEDUSA", "CERBERUS",
+  "CHIMERA", "MINOTAUR", "GRIFFON"
+];
 
-        let tentativasRestantes = 5;
+let tentativas = 0;
 
-        function adivinharDeus() {
-            const deuses = deuses[Math.floor(Math.random() * deuses.length)];
-            let tentativas = 0;
+function adivinharDeus() {
+  const tentativa = prompt("Adivinhe um Deus da mitologia grega: ").toUpperCase('')
 
-            while (tentativas < tentativasRestantes) {
-                const palpite = prompt(`Tentativa ${tentativas + 1}/${tentativasRestantes}: Digite o nome de um deus grego:`);
+  if (deusesMitologiaGrega.includes(tentativa)) {
+    console.log(`Parabens! O deus ${tentativa} esta na lista`)
+  } else {
+    console.log(`O deus ${tentativa} nao esta na lista`)
+  }
 
-                if (!palpite) {
-                    alert("Por favor, insira um nome de deus.");
-                    continue;
-                }
+  tentativas++
 
-                if (palpite === deuses) {
-                    alert(`Parabéns! Você adivinhou corretamente. O deus era ${deuses}.`);
-                    break;
-                } else {
-                    tentativas++;
-                    alert(`Tente novamente. ${tentativasRestantes - tentativas} tentativas restantes.`);
-                }
-            }
+  if (tentativas < 5) {
+    const continuar = prompt("Você gostaria de adivinhar mais um?")
 
-            if (tentativas === tentativasRestantes) {
-                alert(`Suas tentativas acabaram. O deus correto era ${deuses}.`);
-            }
+    if (continuar == "sim") {
+      adivinharDeus();
+    } else {
+      console.log("Obrigado por jogar!");
+    }
+  } else {
+    console.log("Você atingiu o limite de tentativas.");
 
-            const continuarJogo = confirm("Deseja tentar adivinhar outro deus?");
-            if (continuarJogo) {
-                adivinharDeus();
-            } else {
-                alert("Obrigado por jogar!");
-            }
-        }
-
-        console.log(adivinharDeus())
-    
+  }
+}
+  adivinharDeus();
