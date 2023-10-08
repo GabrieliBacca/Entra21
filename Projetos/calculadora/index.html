@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
 </head>
 <body>
     <div class="fundo">
@@ -13,32 +14,32 @@
             <p id="resultado"></p>
             <table>
                 <tr class="formatacao">
-                    <td><button onclick="insert(C)">C</button></td>
-                    <td><button onclick="insert('<')"><</button></td>
-                    <td><button>/</button></td>
-                    <td><button>x</button></td>
+                    <td><button onclick="clean()">C</button></td>
+                    <td><button onclick="back()"><</button></td>
+                    <td><button onclick="insert('/')">/</button></td>
+                    <td><button onclick="insert('*')">x</button></td>
                 </tr>
                 <tr class="formatacao">
                     <td><button onclick="insert('7')">7</button></td>
-                    <td><button>8</button></td>
-                    <td><button>9</button></td>
-                    <td><button>-</button></td>
+                    <td><button onclick="insert('8')">8</button></td>
+                    <td><button onclick="insert('9')">9</button></td>
+                    <td><button onclick="insert('-')">-</button></td>
                 </tr>
                 <tr class="formatacao">
-                    <td><button>4</button></td>
-                    <td><button>5</button></td>
-                    <td><button>6</button></td>
-                    <td><button>+</button></td>
+                    <td><button onclick="insert('4')">4</button></td>
+                    <td><button onclick="insert('5')">5</button></td>
+                    <td><button onclick="insert('6')">6</button></td>
+                    <td><button onclick="insert('+')">+</button></td>
                 </tr>
                 <tr >
-                    <td class="formatacao"><button>1</button></td>
-                    <td class="formatacao"><button>2</button></td>
-                    <td class="formatacao"><button>3</button></td>
-                    <td rowspan="2"  class="igual"><button>=</button></td>
+                    <td class="formatacao"><button onclick="insert('1')">1</button></td>
+                    <td class="formatacao"><button onclick="insert('2')">2</button></td>
+                    <td class="formatacao"><button onclick="insert('3')">3</button></td>
+                    <td rowspan="2"  class="igual"><button onclick="calcular()">=</button></td>
                 </tr>
                 <tr class="formatacao">
-                    <td colspan="2" class="zero"><button >0</button></td>
-                    <td class="formatacao"><button>.</button></td>
+                    <td colspan="2" class="zero"><button onclick="insert('0')" >0</button></td>
+                    <td class="formatacao"><button onclick="insert('.')">.</button></td>
                 </tr>
             </table>
         </div>
