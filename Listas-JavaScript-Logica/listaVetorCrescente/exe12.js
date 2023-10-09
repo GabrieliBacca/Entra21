@@ -14,3 +14,12 @@ let indice = frutas.indexOf("banana");
 console.log(indice)
 frutas.splice(indice,1)//numero de itens que quero remover depois do "indice"
 console.log(frutas)
+
+//Verifique se "morango" está no vetor.
+if (frutas.includes("morango")) {
+    console.log("O vetor contém 'morango'.");
+  } else {
+    console.log("O vetor não contém 'morango'.");
+  }
+
+  
