@@ -5,6 +5,6 @@ function calcular() {
 
     const delta = b * b - (4 * a * c)
 
-    document.getElementById("delta").innerHTML = delta
+    document.getElementById("delta").innerText += delta
 }
 
