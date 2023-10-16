@@ -18,24 +18,23 @@ a::after {
     content: ' 🎥';
 }
 
+.arrow-list li::before {
+    content: "➔ "; 
+    color: #FF5733; 
+    font-weight: bold; 
+    margin-right: 5px; 
+  }
+
+  
 /* Linhas do texto */
 p::first-line {
     font-weight: bold;
     text-transform: uppercase;
 }
 
-
 p::first-letter {
     font-size: 24px;
     color: #ffcc00;
-}
-
-/* PlaceHolder */
-input::placeholder {
-    color: rgb(114, 0, 0);
-    /* Cor do texto de espaço reservado */
-    font-style: normal;
-    /* Estilo de fonte (por exemplo, itálico) */
 }
 
 /* texto selecionado */
@@ -44,8 +43,3 @@ input::placeholder {
     color: rebeccapurple; 
   }
 
-/*mudda o icone da lista*/
-li::marker {
-    color: red;
-  }
-  
