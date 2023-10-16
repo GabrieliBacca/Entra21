@@ -25,7 +25,6 @@ a::after {
     margin-right: 5px; 
   }
 
-  
 /* Linhas do texto */
 p::first-line {
     font-weight: bold;
