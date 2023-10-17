@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="ficarVermelho()" id="btn">Clique aqui</button>
+    <div onclick="transformarCirculo()" class="quadrado"></div>
+    <button onclick="transformarCirculo()">Circulo</button>
+
+
+    <!-- Criar um quadrado 
+    7 botoes
+    cada botoao deve mudar a cor do quadrado para cada cor do arco iris -->
+    
+    <div class="quadrado1"></div>
+    <button onclick="vermelho()">Vermelho</button>
+    <button onclick="laranja()">Laranja</button>
+    <button onclick="amarelo()">Amarelo</button>
+    <button onclick="verde()">Verde</button>
+    <button onclick="azul()">Azul</button>
+    <button onclick="azulMarinho()">Azul Marinho</button>
+    <button onclick="violeta()">Violeta</button>
+<br><br>
+<!-- Forma que o professor fez usando uma fuincao com parametros -->
+    <button onclick="mudarCor('vermelho')"> Vermelho</button>
+    <button onclick="mudarCor('laranja')">laranja</button>
+    <button onclick="mudarCor('amarelo')">Amarelo</button>
+    <button onclick="mudarCor('verde')">Verde</button>
+    <button onclick="mudarCor('azul')">Azul</button>
+    <button onclick="mudarCor('azulMarinho')">Azul Marinho</button>
+    <button onclick="mudarCor('violeta')">Violeta</button>
+<br><br><br><br>
+<!--  Adicionar +5 e -5 -->
+    <button onclick="aumentar()">+5</button>
+    <button onclick="diminuir()">-5</button>
+    <input id="numero" type="number" value="0">
+<br><br><br><br>
+
+        <input type="number" id="n1" placeholder="base">
+        <input type="number" id="n2" placeholder="expoente">
+        <button onclick="potencia()">Calcular</button>
+        <input id= "resultado" type="number" placeholder="resultado">
+
+</body>
+</html>
