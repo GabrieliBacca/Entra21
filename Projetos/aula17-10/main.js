@@ -73,3 +73,32 @@ function potencia(){
 
    document.querySelector("#resultado").value =resultado
 }
+
+//soma
+function soma(){
+    const n1 = Number(document.querySelector('#n1').value)
+    const n2 = Number(document.querySelector('#n2').value)
+    const n3 = Number(document.querySelector('#n3').value)
+    const n4 = Number(document.querySelector('#n4').value)
+
+    const resultado = n1 + n2 + n3 + n4
+    document.querySelector("#resul").value = resultado
+
+
+}
+
+function calcularTroco(){
+    const pagamento = Number(document.querySelector('#pagamento').value)
+    const resul = Number(document.querySelector('#resul').value)
+
+    const troco = pagamento - resul
+
+
+    if(pagamento<resul){
+        alert('valor de pagamento insuficiente')
+        //document.querySelector('#troco').value = 'valor insuficiente'
+    }else{
+        document.querySelector('#troco').value = troco
+
+    }
+}
