@@ -87,6 +87,11 @@ function soma(){
 
 }
 
+//outra forma
+function somarValores(){
+    
+}
+
 function calcularTroco(){
     const pagamento = Number(document.querySelector('#pagamento').value)
     const resul = Number(document.querySelector('#resul').value)
