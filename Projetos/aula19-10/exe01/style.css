@@ -1,0 +1,12 @@
+/*  Quadrado rosa virar um circulo amarelo */
+
+.quadrado{
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}
+
+.amarelo{
+    background-color: yellow;
+    border-radius: 50%;
+}
