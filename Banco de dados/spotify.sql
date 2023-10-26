@@ -25,3 +25,14 @@ SELECT artista FROM musica WHERE genero = 'Rock';
 SELECT genero FROM musica WHERE artista = 'Mari Fernandes';
 
 SELECT titulo FROM musica WHERE ano_lancamento = 2014;
+
+update musica set ano_lancamento = 2023 where id_musica = 1;
+
+select * from musica;
+
+update musica set titulo = 'teste4' where id_musica = '8';
+
+update musica set artista = 'gabrieli bacca	' where id_musica = '5';
+
+
+
