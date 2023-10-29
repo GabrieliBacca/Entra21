@@ -1,0 +1,376 @@
+body{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+
+/* cabeçalho */
+header {
+    background: #fff;
+    /* background: radial-gradient(circle, rgba(174, 238, 219, 0.8183648459383753) 0%, rgba(225, 148, 233, 0.7651435574229692) 100%); */
+    /* height: 10px; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    align-items: center;
+    list-style: none;
+    position: fixed; /* Torna o cabeçalho fixo */
+    top: 0; /* Coloca o cabeçalho no topo da janela de visualização */
+    width: 100%; /* Faz o cabeçalho ocupar a largura completa */
+    z-index: 999; /* Define a ordem de empilhamento para ficar acima de outros elementos */
+    /* text-shadow: 5px 1px 5px  #ff9974; */
+
+}
+
+nav {
+    display: flex;
+    gap:  10px;
+}
+
+ul,a {
+    display: flex;
+    gap: 50px;
+    padding-right: 30px;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+.cabecalho {
+    width: 100px;
+    display: flex;
+    gap:60px;
+    padding-left: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Divizoes */
+
+
+.containerImagem {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    background-image: url(img/jogosvorazesgif.gif);
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir o container */
+    background-attachment: fixed; /* Fixa a imagem de fundo à janela de visualização */
+    opacity: 0.8;
+    border-radius: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+
+
+/* Imagem tela home */
+.gif {
+    width: 100%; /* A largura do GIF é definida como 100% do seu container "sobre" */
+    height: 100%; /* A altura do GIF também é definida como 100% do seu container "sobre" */
+    object-fit: cover; /* Ajusta o GIF para preencher todo o espaço do container, mantendo a proporção */
+}
+
+
+/* personagens */
+.linha {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.personagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personagem img {
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px  #BF3604;
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+  }
+  
+#contato{}
+
+/* SLIDES */
+.slider{
+    margin: 0 auto; 
+    /* em cima e em baixo 0, auto p centralizar */
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* transition: 1s; */
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    transition: 0.1s;
+    background-color: #fff;
+}
+
+#radio1:checked ~.first{
+    margin-left: 0;
+}
+#radio2:checked ~.first{
+    margin-left: -25%;
+}
+#radio3:checked ~.first{
+    margin-left: -50%;
+}
+#radio4:checked ~.first{
+    margin-left: -75%;
+}
+#radio5:checked ~.first{
+    margin-left: -100%;
+}
+#radio6:checked ~.first{
+    margin-left: -125%;
+}
+#radio7:checked ~.first{
+    margin-left: -150%;
+}
+#radio8:checked ~.first{
+    margin-left: -175%;
+}
+#radio9:checked ~.first{
+    margin-left: -200%;
+}
+
+.navigation-auto div{
+   border: 2px solid red;
+   padding: 5px;
+   border-radius: 10px; 
+   cursor: pointer;
+   /* transition: 1s; */
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~.navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+#radio2:checked ~.navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+#radio3:checked ~.navigation-auto .auto-btn3{
+    background-color: #fff;
+}
+#radio4:checked ~.navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+#radio5:checked ~.navigation-auto .auto-btn5{
+    background-color: #fff;
+}
+#radio6:checked ~.navigation-auto .auto-btn6{
+    background-color: #fff;
+}
+#radio7:checked ~.navigation-auto .auto-btn7{
+    background-color: #fff;
+}
+#radio8:checked ~.navigation-auto .auto-btn8{
+    background-color: #fff;
+}
+#radio9:checked ~.navigation-auto .auto-btn9{
+    background-color: #fff;
+}
+
+
+
+
+/* segundo slide */
+#radio10:checked ~ .first {
+    margin-left: 0;
+  }
+  #radio11:checked ~ .first {
+    margin-left: -20%;
+  }
+  #radio12:checked ~ .first {
+    margin-left: -40%;
+  }
+  #radio13:checked ~ .first {
+    margin-left: -60%;
+  }
+  #radio14:checked ~ .first {
+    margin-left: -80%;
+  }
+  #radio15:checked ~ .first {
+    margin-left: -100%;
+  }
+  #radio16:checked ~ .first {
+    margin-left: -120%;
+  }
+  #radio17:checked ~ .first {
+    margin-left: -140%;
+  }
+  #radio18:checked ~ .first {
+    margin-left: -160%;
+  }
+  #radio19:checked ~ .first {
+    margin-left: -180%;
+  }
+  #radio20:checked ~ .first {
+    margin-left: -200%;
+  }
+  
+/* terceiro slide */
+
+#radio21:checked ~ .first {
+    margin-left: -20%;
+  }
+  #radio22:checked ~ .first {
+    margin-left: -40%;
+  }
+  #radio23:checked ~ .first {
+    margin-left: -60%;
+  }
+  #radio24:checked ~ .first {
+    margin-left: -80%;
+  }
+  #radio25:checked ~ .first {
+    margin-left: -100%;
+  }
+  #radio26:checked ~ .first {
+    margin-left: -120%;
+  }
+  
+  /* quarto slide */
+
+  #radio27:checked ~ .first {
+    margin-left: 0;
+  }
+  #radio28:checked ~ .first {
+    margin-left: -25%;
+  }
+  #radio29:checked ~ .first {
+    margin-left: -50%;
+  }
+  #radio30:checked ~ .first {
+    margin-left: -75%;
+  }
+  #radio31:checked ~ .first {
+    margin-left: -100%;
+  }
+  #radio32:checked ~ .first {
+    margin-left: -125%;
+  }
+  #radio33:checked ~ .first {
+    margin-left: -150%;
+  }
+  #radio34:checked ~ .first {
+    margin-left: -175%;
+  }
+  #radio35:checked ~ .first {
+    margin-left: -200%;
+  }
+  
+  /* teste */
+
+  .frases-container {
+    margin: 50px;
+    padding-bottom: 80px;
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff; /* Cor de fundo da seção */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra da seção */
+}
+
+.frase {
+    margin-bottom: 20px;
+}
+
+.frase p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #333; /* Cor do texto */
+}
+
+.frase p::before {
+    content: "“"; /* Adiciona aspas no início da frase */
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.frase p::after {
+    content: "”"; /* Adiciona aspas no final da frase */
+    font-size: 24px;
+    margin-left: 5px;
+}
