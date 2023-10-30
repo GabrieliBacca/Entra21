@@ -259,55 +259,55 @@ footer {
     margin-left: 0;
   }
   #radio11:checked ~ .first {
-    margin-left: -20%;
+    margin-left: -25%;
   }
   #radio12:checked ~ .first {
-    margin-left: -40%;
+    margin-left: -50%;
   }
   #radio13:checked ~ .first {
-    margin-left: -60%;
+    margin-left: -75%;
   }
   #radio14:checked ~ .first {
-    margin-left: -80%;
-  }
-  #radio15:checked ~ .first {
     margin-left: -100%;
   }
+  #radio15:checked ~ .first {
+    margin-left: -125%;
+  }
   #radio16:checked ~ .first {
-    margin-left: -120%;
+    margin-left: -150%;
   }
   #radio17:checked ~ .first {
-    margin-left: -140%;
+    margin-left: -175%;
   }
   #radio18:checked ~ .first {
-    margin-left: -160%;
+    margin-left: -200%;
   }
   #radio19:checked ~ .first {
-    margin-left: -180%;
+    margin-left: -225%;
   }
   #radio20:checked ~ .first {
-    margin-left: -200%;
+    margin-left: -250%;
   }
   
 /* terceiro slide */
 
 #radio21:checked ~ .first {
-    margin-left: -20%;
+    margin-left: -0%;
   }
   #radio22:checked ~ .first {
-    margin-left: -40%;
+    margin-left: -25%;
   }
   #radio23:checked ~ .first {
-    margin-left: -60%;
+    margin-left: -50%;
   }
   #radio24:checked ~ .first {
-    margin-left: -80%;
+    margin-left: -75%;
   }
   #radio25:checked ~ .first {
     margin-left: -100%;
   }
   #radio26:checked ~ .first {
-    margin-left: -120%;
+    margin-left: -125%;
   }
   
   /* quarto slide */
@@ -341,12 +341,14 @@ footer {
   }
   
   /* teste */
-
   .frases-container {
     margin: 50px;
     padding-bottom: 80px;
-    width: 80%;
-    max-width: 600px;
+    /* width: 900px; */
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap; /* Adiciona quebra de linha quando não couber no container */
+    justify-content: center; /* Centraliza as frases horizontalmente */
     background-color: #fff; /* Cor de fundo da seção */
     padding: 20px;
     border-radius: 5px;
@@ -354,7 +356,7 @@ footer {
 }
 
 .frase {
-    margin-bottom: 20px;
+    margin-right: 20px; /* Adiciona margem direita entre as frases */
 }
 
 .frase p {
