@@ -20,6 +20,8 @@ update filme set nome_filme = 'Rua do medo' where id_filme = 2;
 
 select * from filme;
 
+select * from filme where diretor like '%s%';
+
 select * from filme where ano_lancamento < 1990;
 
 delete from filme where id_filme = 3;
