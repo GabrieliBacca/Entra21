@@ -42,6 +42,8 @@ update filme set duracao = 120 where id_filme = 2;
 
 update filme set duracao = 120 where id_filme = 4;
 
+update filme set duracao = 120; -- todos para 120
+
 select duracao from filme;
 
 select avg(duracao) as media from filme;
