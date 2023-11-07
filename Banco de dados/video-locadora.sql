@@ -48,6 +48,7 @@ select duracao from filme;
 
 select avg(duracao) as media from filme;
 
+select * from filme order by ano_lancamento desc; -- asc descrescente e crescente
 
 
 
