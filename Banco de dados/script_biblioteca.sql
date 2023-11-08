@@ -8,22 +8,22 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema bibli
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema bibli
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+CREATE SCHEMA IF NOT EXISTS `bibli` DEFAULT CHARACTER SET utf8 ;
 -- -----------------------------------------------------
 -- Schema new_schema1
 -- -----------------------------------------------------
-USE `mydb` ;
+USE `bibli` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`mae`
+-- Table `bibli`.`mae`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`mae` (
+CREATE TABLE IF NOT EXISTS `bibli`.`mae` (
   `idmae` INT NOT NULL AUTO_INCREMENT,
   `nome_mae` VARCHAR(90) NOT NULL,
   `idade` INT NOT NULL,
@@ -32,9 +32,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`filho`
+-- Table `bibli`.`filho`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`filho` (
+CREATE TABLE IF NOT EXISTS `bibli`.`filho` (
   `idfilho` INT NOT NULL AUTO_INCREMENT,
   `nome_filho` VARCHAR(45) NOT NULL,
   `idade` INT NOT NULL,
@@ -43,16 +43,16 @@ CREATE TABLE IF NOT EXISTS `mydb`.`filho` (
   INDEX `fk_filho_mae_idx` (`FK_idmae` ASC) VISIBLE,
   CONSTRAINT `fk_filho_mae`
     FOREIGN KEY (`FK_idmae`)
-    REFERENCES `mydb`.`mae` (`idmae`)
+    REFERENCES `bibli`.`mae` (`idmae`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`paciente`
+-- Table `bibli`.`paciente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`paciente` (
+CREATE TABLE IF NOT EXISTS `bibli`.`paciente` (
   `idpaciente` INT NOT NULL AUTO_INCREMENT,
   `nome_paciente` VARCHAR(45) NOT NULL,
   `idade` INT NOT NULL,
@@ -62,9 +62,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`medico`
+-- Table `bibli`.`medico`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`medico` (
+CREATE TABLE IF NOT EXISTS `bibli`.`medico` (
   `idmedico` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `CPF` BIGINT NOT NULL,
@@ -76,9 +76,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`consulta`
+-- Table `bibli`.`consulta`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`consulta` (
+CREATE TABLE IF NOT EXISTS `bibli`.`consulta` (
   `FK_paciente_idpaciente` INT NOT NULL,
   `FK_medico_idmedico` INT NOT NULL,
   `idconsulta` INT NOT NULL,
@@ -90,29 +90,24 @@ CREATE TABLE IF NOT EXISTS `mydb`.`consulta` (
   INDEX `fk_consulta_medico1_idx` (`FK_medico_idmedico` ASC) VISIBLE,
   CONSTRAINT `fk_consulta_paciente1`
     FOREIGN KEY (`FK_paciente_idpaciente`)
-    REFERENCES `mydb`.`paciente` (`idpaciente`)
+    REFERENCES `bibli`.`paciente` (`idpaciente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_consulta_medico1`
     FOREIGN KEY (`FK_medico_idmedico`)
-    REFERENCES `mydb`.`medico` (`idmedico`)
+    REFERENCES `bibli`.`medico` (`idmedico`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`table1`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`table1` (
-)
-ENGINE = InnoDB;
+
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Livro`
+-- Table `bibli`.`Livro`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Livro` (
+CREATE TABLE IF NOT EXISTS `bibli`.`Livro` (
   `idLivro` INT NOT NULL AUTO_INCREMENT,
   `nome_livro` VARCHAR(45) NOT NULL,
   `ano_lancamento` YEAR NOT NULL,
@@ -123,9 +118,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Cliente`
+-- Table `bibli`.`Cliente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Cliente` (
+CREATE TABLE IF NOT EXISTS `bibli`.`Cliente` (
   `idCliente` INT NOT NULL AUTO_INCREMENT,
   `nome_cliente` VARCHAR(45) NOT NULL,
   `cpf` BIGINT NOT NULL,
@@ -136,9 +131,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`emprestimo`
+-- Table `bibli`.`emprestimo`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`emprestimo` (
+CREATE TABLE IF NOT EXISTS `bibli`.`emprestimo` (
   `id_emprestimo` INT NOT NULL AUTO_INCREMENT,
   `FK_Livro_idLivro` INT NOT NULL,
   `FK_Cliente_idCliente` INT NOT NULL,
@@ -148,12 +143,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`emprestimo` (
   INDEX `fk_emprestimo_Cliente1_idx` (`FK_Cliente_idCliente` ASC) VISIBLE,
   CONSTRAINT `fk_emprestimo_Livro1`
     FOREIGN KEY (`FK_Livro_idLivro`)
-    REFERENCES `mydb`.`Livro` (`idLivro`)
+    REFERENCES `bibli`.`Livro` (`idLivro`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_emprestimo_Cliente1`
     FOREIGN KEY (`FK_Cliente_idCliente`)
-    REFERENCES `mydb`.`Cliente` (`idCliente`)
+    REFERENCES `bibli`.`Cliente` (`idCliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
