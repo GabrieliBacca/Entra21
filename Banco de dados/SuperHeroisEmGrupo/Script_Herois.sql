@@ -209,17 +209,7 @@ INSERT INTO `mydb`.`Poderes` (`Poder`) VALUES
 ('Manipulação do Tempo'),
 ('Criação de Portais');
 
-INSERT INTO `mydb`.`SuperHeroi_has_Poderes` (`SuperHeroi_idSuperHeroi`, `Poderes_idPoderes`) VALUES
-(1, 1),
-(2, 2),
-(3, 3),
-(4, 4),
-(5, 5),
-(6, 6),
-(7, 7),
-(8, 8),
-(9, 9),
-(10, 10);
+
 
 INSERT INTO `mydb`.`Tipo_Missao` (`Tipo`) VALUES
 ('Resgate'),
@@ -270,19 +260,31 @@ INSERT INTO `mydb`.`Fraquezas` (`Fraquezas`) VALUES
 ('Inabilidade de seguir regras');
 
 INSERT INTO `mydb`.`Fraquezas_has_SuperHeroi` (`Fraquezas_idFraquezas`, `SuperHeroi_idSuperHeroi`) VALUES
-(1, 1),
-(2, 2),
-(3, 3),
-(4, 4),
-(5, 5),
-(6, 6),
-(7, 7),
-(8, 8),
-(9, 9),
-(10, 10);
+(1, 2),
+(2, 3),
+(3, 4),
+(4, 5),
+(5, 4),
+(6, 9),
+(7, 4),
+(8, 2),
+(9, 1),
+(10, 1);
 
 
+INSERT INTO `mydb`.`SuperHeroi_has_Poderes` (`SuperHeroi_idSuperHeroi`, `Poderes_idPoderes`) VALUES
+(1, 9),
+(2, 6),
+(3, 5),
+(4, 2),
+(5, 2),
+(6, 4),
+(7, 3),
+(8, 4),
+(9, 8),
+(10, 1);
 
+select * from superheroi_has_poderes;
 
 
 
