@@ -91,9 +91,13 @@ select funcionario.*, departamentos.* from funcionario inner join departamentos 
 
 select series.titulo, diretores.nome from series inner join diretores on series.id_diretor = diretores.id_diretores where diretores.nacionalidade = 'estadunidense';
 
-select series.genero, diretores.idade from series inner join diretores on series.id_diretor = diretores.id_diretores where diretores.idade > 48;
+select series.genero as 'genero filme', diretores.idade as 'idade diretor' from series inner join diretores on series.id_diretor = diretores.id_diretores where diretores.idade > 48;
 
 
 select count(*) as total_series from series inner join diretores on series.id_diretor = diretores.id_diretores where diretores.nacionalidade like '%brasileir%' and series.genero like '%drama%';
+
+-- Jeito que o professor passou
+select count(series.id_serie) as total_series from series inner join diretores on series.id_diretor = diretores.id_diretores where diretores.nacionalidade like '%brasileir%' and series.genero like '%drama%';
+
 
 
