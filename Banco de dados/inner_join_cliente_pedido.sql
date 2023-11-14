@@ -1,3 +1,5 @@
+use netflix;
+
 create table cliente(
 	id_cliente int primary key auto_increment,
     nome varchar(50),
@@ -13,17 +15,6 @@ create table pedido(
 	id_cliente int references cliente(id_cliente)
 
 );
-
--- SELECTS 
-
-select cliente.nome, cliente.email, cliente.cidade, pedido.* from pedido inner join cliente on pedido.id_cliente = cliente.id_cliente order by pedido.id_cliente asc;
-
-select cliente.nome, cliente.email, cliente.cidade, count(pedido.id_pedido) from pedido inner join cliente on pedido.id_cliente = cliente.id_cliente group by cliente.nome, cliente.email, cliente.cidade;
-
-select pedido.num_pedido, pedido.data_pedido, cliente.nome, cliente.email, cliente.cidade from pedido inner join cliente on pedido.id_cliente = cliente.id_cliente;
-
-select cliente.nome from cliente left join pedido on pedido.id_cliente = cliente.id_cliente where pedido.id_pedido is null;
-
 
 -- INSERTS
 
@@ -63,4 +54,17 @@ INSERT INTO pedido (num_pedido, data_pedido, produto, id_cliente) VALUES
     (1009, '2023-09-30', 'Teclado', 2),
     (1010, '2023-10-25', 'Mouse sem fio', 1);
 
+-- SELECTS 
 
+-- FORMA DIFERENTE MAIS RAPIDA DE FAZER O SELECT
+select c.nome as NomeCliente , c.email as EmailCliente, p.num_pedido as NumeroPedido from Cliente c inner join pedido p on c.id_cliente = p.id_cliente order by c.nome asc;
+-- ------------------------------------------------------------------
+
+
+select cliente.nome, cliente.email, cliente.cidade, pedido.* from pedido inner join cliente on pedido.id_cliente = cliente.id_cliente order by pedido.id_cliente asc;
+
+select cliente.nome, cliente.email, cliente.cidade, count(pedido.id_pedido) from pedido inner join cliente on pedido.id_cliente = cliente.id_cliente group by cliente.nome, cliente.email, cliente.cidade;
+
+select pedido.num_pedido, pedido.data_pedido, cliente.nome, cliente.email, cliente.cidade from pedido inner join cliente on pedido.id_cliente = cliente.id_cliente;
+
+select cliente.nome from cliente left join pedido on pedido.id_cliente = cliente.id_cliente where pedido.id_pedido is null;
