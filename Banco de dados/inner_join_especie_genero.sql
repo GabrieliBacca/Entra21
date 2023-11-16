@@ -30,6 +30,50 @@ select e.nome, e.descricao, e.populacao, e.habitat, g.nome, g.descricao, g.orige
 on e.id_genero = g.id_genero order by e.nome asc;
 
 -- 4) Gêneros sem Espécies:
+select g.nome, count(e.id_genero is null), g.descricao, g.origem_geografica from genero g left join especie e on g.id_genero = e.id_genero where e.id_genero is null group by g.nome,e.nome, g.descricao, g.origem_geografica;
+
+-- 5) Um pesquisador precisa identificar a espécie com a menor população registrada:
+select e.nome, min(e.populacao) from especie e inner join genero g on g.id_genero = e.id_genero group by e.nome order by min(e.populacao) limit 1;
+
+-- 6) Um gestor de zoológico pretende destacar as espécies mais numerosas para exposição:
+select e.nome, max(e.populacao) as max from especie e inner join genero g on g.id_genero = e.id_genero group by e.nome order by max desc;
+
+-- 7) Um biólogo explora a diversidade de espécies na Floresta Amazônica:
+select e.nome, e.habitat from especie e inner join genero g on g.id_genero = e.id_genero where habitat like '%florestas tropicais%';
+
+-- 8) Explorando a Biodiversidade Marinha: Análise Detalhada das Espécies do Gênero "Carcharodon"
+-- Inserir gênero "Carcharodon" na tabela 'genero'
+INSERT INTO genero (nome, descricao, origem_geografica) VALUES 
+  ('Carcharodon', 'Gênero de tubarões', 'Mundial');
+
+-- Inserir espécies associadas ao gênero "Carcharodon" na tabela 'especie'
+INSERT INTO especie (nome, descricao, populacao, habitat, id_genero) VALUES
+  ('Carcharodon carcharias', 'Tubarão-branco', 3000, 'Oceanos', 14),
+  ('Carcharodon megalodon', 'Tubarão-megalodon', 0, 'Extinto', 14);
+  
+select e.nome from especie e inner join genero g on g.id_genero = e.id_genero where g.nome ='Carcharodon';
+
+-- 9) Explorando a Origem Geográfica 
+-- Inserir o gênero "Hippocampus" se ainda não existir
+INSERT INTO genero (nome, descricao, origem_geografica) 
+VALUES ('Hippocampus', 'Cavalo-marinho', 'Mundial')
+ON DUPLICATE KEY UPDATE nome = nome; -- Garante que o gênero não será duplicado
+
+-- Inserir a espécie "Hippocampus reidi"
+INSERT INTO especie (nome, descricao, populacao, habitat, id_genero) 
+VALUES ('Hippocampus reidi', 'Cavalo-marinho de focinho longo', 5000, 'Recifes de coral', @id_genero_hippocampus);
+
+select e.nome, e.habitat, e.descricao from especie e where e.nome ='Hippocampus reidi';
+
+-- 10) Pesquisa na Austrália
+select e.nome, e.habitat from especie e inner join genero g on g.id_genero = e.id_genero where habitat like '%montanhas%';
+
+-- 11) Totalizando o Banco de Dados
+select g.nome, count(e.id_genero) as Quantidade_especie from especie e inner join genero g on g.id_genero = e.id_genero group by g.nome;
+
+-- insert genero sem especie 
+INSERT INTO genero (nome, descricao, origem_geografica) VALUES 
+('Ave', 'ave' , 'asia');
 
 
 -- Inserções para a tabela 'genero'
