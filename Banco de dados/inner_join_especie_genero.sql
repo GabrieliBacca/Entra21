@@ -71,6 +71,16 @@ select e.nome, e.habitat from especie e inner join genero g on g.id_genero = e.i
 -- 11) Totalizando o Banco de Dados
 select g.nome, count(e.id_genero) as Quantidade_especie from especie e inner join genero g on g.id_genero = e.id_genero group by g.nome;
 
+-- 12) total das especies de cada genero
+select g.nome, count(e.id_genero) as Quantidade_especie from especie e inner join genero g on g.id_genero = e.id_genero group by g.nome;
+
+-- 13) media das especies de cada genero
+select g.nome, avg(e.id_genero) as media_especie from especie e inner join genero g on g.id_genero = e.id_genero group by g.nome;
+
+-- 14) soma de toda população
+select count(e.id_especie) as soma_total from especie e inner join genero g on g.id_genero = e.id_genero;
+
+
 -- insert genero sem especie 
 INSERT INTO genero (nome, descricao, origem_geografica) VALUES 
 ('Ave', 'ave' , 'asia');
