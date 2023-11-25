@@ -1,4 +1,3 @@
-
 // number = valores numericos (reais e inteiros)
 // string = caracter
 // boolean = true e false
