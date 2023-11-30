@@ -16,7 +16,7 @@ class Quadrado{
     }
 
     calcularArea(){
-        return  console.log(`Area : ${this.lado * this.lado}`);
+        return this.lado**2;
     }
 }
 

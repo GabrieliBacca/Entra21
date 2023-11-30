@@ -22,18 +22,22 @@ class Retangulo{
     }
 
     calcularArea(){
-        return console.log(`Area = ${this.base * this.altura}`)
+        return this.base * this.altura
     }
 
     calcularPerimetro(){
-        return console.log(`Perimetro = ${this.base + this.altura}`)
+        return this.base + this.altura
+    }
+
+    quantidadePiso(areaPiso){
+        return console.log(this.calcularArea() / areaPiso);
     }
 
 }
 
 retangulo1 = new Retangulo(5, 2)
-retangulo1.mostrarValorLados()
 retangulo1.mudarValorLados(8,6)
 retangulo1.mostrarValorLados()
-retangulo1.calcularArea()
-retangulo1.calcularPerimetro()
+console.log(`Area: ${retangulo1.calcularArea()}`)
+console.log(`Perimetro = ${retangulo1.calcularPerimetro()}`)
+retangulo1.quantidadePiso(6)
