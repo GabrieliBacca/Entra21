@@ -36,7 +36,7 @@ class Triangulo{
 
 let triangulo1 = new Triangulo(5,6,3)
 triangulo1.retornarLados()
-triangulo1.mudarLados(1,5,19)
+triangulo1.mudarLados(1,1,1)
 triangulo1.retornarLados()
 console.log(triangulo1.calcularArea())
 triangulo1.verificarTriangulo()
