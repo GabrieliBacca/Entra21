@@ -20,6 +20,8 @@ class Triangulo{
     retornarLados(){
         console.log(`Lado A: ${this.ladoA} Lado B: ${this.ladoB} Lado C: ${this.ladoC}`)
     }
+
+    calcularArea()
 }
 
 let triangulo1 = new Triangulo(5,6,3)
