@@ -21,10 +21,22 @@ class Triangulo{
         console.log(`Lado A: ${this.ladoA} Lado B: ${this.ladoB} Lado C: ${this.ladoC}`)
     }
 
-    calcularArea()
+    calcularArea(){
+        return (this.ladoA * this.ladoB) / 2;
+    }
+
+    verificarTriangulo(){
+        if(this.ladoA > this.ladoB + this.ladoC || this.ladoB > this.ladoA + this.ladoC || this.ladoC > this.ladoA + this.ladoB){
+            console.log('É um triangulo')
+        }else{
+            console.log('Não é um Tringulo')
+        }
+    }
 }
 
 let triangulo1 = new Triangulo(5,6,3)
 triangulo1.retornarLados()
-triangulo1.mudarLados(9,87,6)
+triangulo1.mudarLados(1,5,19)
 triangulo1.retornarLados()
+console.log(triangulo1.calcularArea())
+triangulo1.verificarTriangulo()
