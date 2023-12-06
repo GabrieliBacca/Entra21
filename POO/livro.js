@@ -27,7 +27,7 @@ pequenoPrincipe.mostrarDetalhes()
 pequenoPrincipe.reservar()
 pequenoPrincipe.mostrarDetalhes()
 
-//fluxo
+//fluxo como cadasdrar um livro, mas nao foi finalizado
 
 listaLivros = []
 const jsonfile = require('jsonfile')

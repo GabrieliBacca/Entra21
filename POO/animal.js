@@ -10,8 +10,10 @@ class Animal{
         this.idade = idade;
     }
 
-    emitirSom(som){
-        console.log(som);
+    emitirSom(){
+        let sons = ['miau miau', 'miauuuuuuu', 'prrrr']
+        let index = Math.round(Math.random() * (sons.length-1))
+        alert(sons[index])
     }
 
     envelhecer(){
@@ -19,7 +21,8 @@ class Animal{
     }
 }
 
+
 gato = new Animal('gato', 'felino', 5)
-gato.emitirSom('miau')
-gato.envelhecer()
-console.log(gato.idade)
+console.log(gato.emitirSom())
+// gato.envelhecer()
+// console.log(gato.idade)
