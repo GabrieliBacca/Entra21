@@ -21,20 +21,29 @@ class Funcionario{
     this.cargo = novaFuncao
    }
 
+   cadastrar(){
+    this.nome = prompt('Nome: ')
+    this.cargo = prompt('Cargo: ')
+    this.salario = prompt('Salario: ')
+    this.departamento = prompt('Departamento: ')
+   }
+
 }
 
+let funcionario = new Funcionario()
 
-let nome = prompt('Nome: ')
-let cargo = prompt('Cargo: ')
-let salario = prompt('Salario: ')
-let departamento = prompt('Departamento: ')
-let funcionario = new Funcionario(nome, cargo,salario,departamento)
 
 while(true){
-    let menu = prompt('1-Promover 2- Exibir Detalhes')
+    let menu = prompt('1-Promover 2- Exibir Detalhes 3- Cadastrar')
     if(menu=='1') {
         novaFuncao = prompt('Informe a nova funcao: ')
         funcionario.promover(novaFuncao)
-    }else if(menu=='2') funcionario.exibirDetalhes()
+    }
+    
+    else if(menu=='2') funcionario.exibirDetalhes()
+
+    else if(menu=='3'){
+        funcionario.cadastrar()
+    }
     else break
 }
