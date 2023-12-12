@@ -21,8 +21,9 @@ while(true){
             potencias[i] =Number(prompt('Potencia: '))
         }
 
+        let i;
         let carro ={
-            id: id,
+            id: i,
             marca: marca,
             modelo: modelo,
             ano: ano,
@@ -47,6 +48,9 @@ while(true){
             }
             media = soma/carro.potencia.length
         alert(`Media: ${media} `)
+    }else if(menu==4){
+let id = prompt('Digite o ID do carro a ser excluido: ')
+
     }
     else if(menu=='5') break
 }
