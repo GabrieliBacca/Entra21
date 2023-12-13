@@ -5,52 +5,51 @@
 // 4- Excluir carro
 // 5- Sair
 
+
 let carros = []
-
+let i = 0
 while(true){
-    let menu = prompt(`1- Cadastrar novo carro\n2- Ver carros cadastrados\n3- Calcular media de potencia\n4- Excluir carro\n5- Sair`)
+    let menu = prompt('1-Novo Carro\n2-Ver Carros\n3-Media Potencia\n4-Excluir Carro\n5-sair')
 
-    if(menu=='1'){
-        let id = prompt('Id: ')
-        let marca = prompt('Marca: ')
-        let modelo = prompt('Modelo: ')
-        let ano = prompt('Ano: ')
-        let potencias = []
-
-        for(let i=0;i<1;i++){
-            potencias[i] =Number(prompt('Potencia: '))
-        }
-
-        let i;
-        let carro ={
-            id: i,
-            marca: marca,
-            modelo: modelo,
-            ano: ano,
-            potencia: potencias
-        }
-        carros.push(carro)
-    }
-
-
-    else if(menu=='2'){
-        carros.forEach(c => {
-            console.log(c)
-        });
-    }
-
-    else if(menu=='3'){
-        let soma =0
-        let media = 0
-
-            for(let i=0; i < carros.length;i++){
-                soma += carros.carro.potencias[i]
+    switch(menu){
+        case '1':
+            i++
+            let carro = {
+                id: i,      
+                modelo: prompt('MODELO:'),
+                marca: prompt('MARCA: '),
+                ano: prompt('ANO: '),
+                potencia: Number(prompt('POTENCIA: '))
             }
-            media = soma/carro.potencia.length
-        alert(`Media: ${media} `)
-    }else if(menu==4){
-let id = prompt('Digite o ID do carro a ser excluido: ')
+            carros.push(carro)
+        break;
 
+        case '2':
+            let texto = ''
+            carros.forEach(carro => {
+                texto += `Modelo: ${carro.modelo} Marca: ${carro.marca}\n`
+            });
+            alert(texto)
+        break;
+
+        case '3':
+            let soma = 0
+            carros.forEach(carro => {
+                soma += carro.potencia
+            });
+            // for (let i = 0; i < carro.length; i++) {
+            //     soma+= carro.potencia;               
+            // }
+            alert(`Media de Potencia de todos os carros: ${soma/carros.length}HP`)
+        break;
+
+        case '4':
+            let id = Number(prompt('Digite o ID do carro a ser excluido'))
+            if(confirm(`Deseja excluir o carro com ID: ${id}?`)){           
+                carros = carros.filter( carro => carro.id != id)
+                alert('Carro excluído com sucesso')
+            }
     }
-    else if(menu=='5') break
+
+    if(menu == '5') break;
 }
