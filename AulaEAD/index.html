@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer src="exemplo5.js"></script>
 </head>
+
 <body>
     <!-- Exemplo 3 -->
     <!-- <h1>Navegador Youtube</h1>
@@ -13,11 +15,10 @@
     </ul>
     <button id="adicionarCanalBtn"></button> -->
 
-   <!-- Exemplo 4 -->
+    <!-- Exemplo 4 -->
     <!-- <label for="lista"> Lista de Compras</label>
     <br><br>
     <label for="produto"> Produto: </label>
-  
     <input type="text" class="inp-item">
     <button class="novo-item">
         Cadastrar
@@ -26,20 +27,18 @@
     </ul> -->
 
     <!-- Exemplo 5 -->
+    <form id="enderecoForm">
+        <label for="nome">Endereco</label> <br>
     
-<form action="#" method="post"> 
-    <label for="nome"> Endereco </label> <br>
-
-    <input type="text" class="rua" placeholder="rua">
-    <br>
-    <input type="text" class="bairro" placeholder="bairro">
-    <br>
-    <input type="text" class="cidade" placeholder="cidade">
-    <br>
-
-    <input type="submit" value="Cadastrar">
-</form>
-
-  
+        <input type="text" name="rua" placeholder="Rua">
+        <br>
+        <input type="text" name="bairro" placeholder="Bairro">
+        <br>
+        <input type="text" name="cidade" placeholder="Cidade">
+        <br>
+    
+        <input type="submit" id="cadastrar" value="Cadastrar">
+    </form>
+    
 </body>
 </html>

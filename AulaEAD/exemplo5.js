@@ -3,12 +3,16 @@
 // mostrar um alerta com os dados do formulario
 // Utilizar o evento "submit" do formulario
 
-const novoEndereco = () =>{
-    let texto = document.querySelector('.rua').value
-    const button = document.createElement('submit');
-    button.addEventListener("click", e =>{
-        alert(texto)
-    })
+document.getElementById('enderecoForm').addEventListener('submit', function (e) {
+   
+    let formData = new FormData(e.target)
 
-}
-document.querySelector('.cadastrar').addEventListener('click', novoEndereco)
+    let rua = formData.get('rua')
+    let bairro = formData.get('bairro')
+    let cidade = formData.get('cidade')
+
+    let confirmacao = confirm("Rua: " + rua + "\nBairro: " + bairro + "\nCidade: " + cidade)
+    if (confirmacao) {
+        alert("Cadastro realizado com sucesso!\nRua: " + rua + "\nBairro: " + bairro + "\nCidade: " + cidade)
+    }
+})
