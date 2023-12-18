@@ -1,5 +1,6 @@
 const express = require('express')
 const server = express()
+const filmes = require('./src/data/filme.json')
 //cria uma aplicacao express
 
 server.listen(3000, () => {
@@ -16,10 +17,6 @@ server.get('/usuario', (req,res) => {
 })
 
 server.get('/filme', (req,res) => {
-    return res.json({
-        titulo: "Gabis",
-        duracao: "3h15min",    
-        descricao: "Um drama dirigido por Steven Spielberg, baseado na história real de Oskar Schindler, que salvou a vida de mais de mil judeus durante o Holocausto."
-    })
+    return res.json(filmes)
 })
 

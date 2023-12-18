@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "titulo": "Titanic",
+      "duracao": "3h14min",
+      "descricao": "Um romance épico dirigido por James Cameron, que narra a trágica história de amor entre Jack e Rose a bordo do icônico navio Titanic."
+    },
+    {
+      "id": 2,
+      "titulo": "Matrix",
+      "duracao": "2h16min",
+      "descricao": "Um filme de ficção científica inovador dirigido pelos irmãos Wachowski, que explora a realidade virtual e a luta pela liberdade humana contra as máquinas."
+    },
+    {
+      "id": 3,
+      "titulo": "O Poderoso Chefão",
+      "duracao": "2h55min",
+      "descricao": "Um clássico dirigido por Francis Ford Coppola, que retrata a saga da família Corleone no mundo do crime organizado."
+    },
+    {
+      "id": 4,
+      "titulo": "Forrest Gump",
+      "duracao": "2h22min",
+      "descricao": "Um filme dirigido por Robert Zemeckis, que conta a extraordinária vida de Forrest Gump, um homem comum que viveu momentos extraordinários na história dos Estados Unidos."
+    },
+    {
+      "id": 5,
+      "titulo": "Pulp Fiction",
+      "duracao": "2h34min",
+      "descricao": "Um filme de Quentin Tarantino conhecido por sua estrutura não linear e diálogos marcantes, explorando histórias interligadas de criminosos e personagens peculiares."
+    },
+    {
+      "id": 6,
+      "titulo": "Interestelar",
+      "duracao": "2h49min",
+      "descricao": "Um épico de ficção científica dirigido por Christopher Nolan, que segue uma equipe de exploradores espaciais em busca de um novo lar para a humanidade."
+    },
+    {
+      "id": 7,
+      "titulo": "O Senhor dos Anéis: A Sociedade do Anel",
+      "duracao": "2h58min",
+      "descricao": "O primeiro filme da trilogia dirigida por Peter Jackson, baseado na obra de J.R.R. Tolkien, que narra a jornada épica para destruir o Um Anel."
+    },
+    {
+      "id": 8,
+      "titulo": "Cidadão Kane",
+      "duracao": "1h59min",
+      "descricao": "Um clássico dirigido por Orson Welles, considerado por muitos como o melhor filme de todos os tempos, que explora a ascensão e queda de um magnata da mídia."
+    },
+    {
+      "id": 9,
+      "titulo": "A Lista de Schindler",
+      "duracao": "3h15min",
+      "descricao": "Um drama dirigido por Steven Spielberg, baseado na história real de Oskar Schindler, que salvou a vida de mais de mil judeus durante o Holocausto."
+    },
+    {
+      "id": 10,
+      "titulo": "E o Vento Levou",
+      "duracao": "3h58min",
+      "descricao": "Um clássico épico dirigido por Victor Fleming, que se passa durante a Guerra Civil Americana e conta a história de Scarlett O'Hara e seu amor por Rhett Butler."
+    }
+  ]
+  
