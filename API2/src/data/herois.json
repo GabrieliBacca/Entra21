@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Superman",
+        "alias": "Clark Kent",
+        "powers": [
+            "Super strength",
+            "Flight",
+            "Heat vision"
+        ]
+    },
+    {
+        "name": "Batman",
+        "alias": "Bruce Wayne",
+        "powers": [
+            "Genius-level intellect",
+            "Master martial artist",
+            "Gadgetry"
+        ]
+    },
+    {
+        "name": "Wonder Woman",
+        "alias": "Diana Prince",
+        "powers": [
+            "Superhuman strength",
+            "Lasso of Truth",
+            "Flight"
+        ]
+    },
+    {
+        "name": "Spider-Man",
+        "alias": "Peter Parker",
+        "powers": [
+            "Wall-crawling",
+            "Super agility",
+            "Spider-sense"
+        ]
+    },
+    {
+        "name": "Captain America",
+        "alias": "Steve Rogers",
+        "powers": [
+            "Superhuman strength",
+            "Shield mastery",
+            "Enhanced agility"
+        ]
+    }
+]
