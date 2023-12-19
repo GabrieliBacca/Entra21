@@ -3,6 +3,9 @@ const server = express()
 const filmes = require('./src/data/filme.json')
 //cria uma aplicacao express
 
+const cors = require('cors');
+server.use(cors());
+
 server.listen(3000, () => {
     console.log('O servidor está funcionando')
 })
