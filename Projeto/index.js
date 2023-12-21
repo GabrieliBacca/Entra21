@@ -1,0 +1,1 @@
+// back separado do front, no fornt eu faco o caluclo da porcetagem usando regra de tres
