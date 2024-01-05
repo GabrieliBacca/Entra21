@@ -24,5 +24,5 @@ class Animal{
 
 gato = new Animal('gato', 'felino', 5)
 console.log(gato.emitirSom())
-// gato.envelhecer()
-// console.log(gato.idade)
+gato.envelhecer()
+console.log(gato.idade)
