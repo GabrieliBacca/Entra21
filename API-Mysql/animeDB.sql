@@ -20,8 +20,3 @@ create table personagem(
 
 insert into personagem values(201, 'Naruto', 15), (202, 'Hitachi', 16)
 
-
-create table LUGAR(
-		id int primary key auto_increment,
-        nome varchar(50),
-);
