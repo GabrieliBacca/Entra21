@@ -1,0 +1,45 @@
+<!-- Voting Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Page</title>
+</head>
+<body>
+    <h1>Vote for your favorite animal</h1>
+    <form id="votingForm" action="/vote" method="post">
+        <button type="button" onclick="submitVote('cachorro')">Vote for Dog</button>
+        <button type="button" onclick="submitVote('gato')">Vote for Cat</button>
+        <input type="hidden" name="animal" id="animalInput" value="">
+    </form>
+
+    <script>
+        function submitVote(animal) {
+            document.getElementById('animalInput').value = animal;
+            document.getElementById('votingForm').submit();
+        }
+    </script>
+
+
+
+
+    <h1>Voting Results</h1>
+    <div id="results"></div>
+
+    <script>
+        fetch('/results')
+            .then(response => response.json())
+            .then(data => {
+                const resultsDiv = document.getElementById('results');
+                resultsDiv.innerHTML = `<p>Total Votes: ${data.totalVotes}</p>`;
+
+                data.results.forEach(result => {
+                    resultsDiv.innerHTML += `<p>${result.animal}: ${result.percentage.toFixed(2)}%</p>`;
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+
+</body>
+</html>
