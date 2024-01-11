@@ -1,0 +1,24 @@
+<!-- Voting Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votacao</title>
+    <link rel="stylesheet" href="votar.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="votacao-container">
+       <img class="imagem-votacao" src="img/dc.webp" alt="fundo">
+      
+       <div class="caixa-branca">
+        <p class="pergunta">Marvel VS DC</p>
+        <button class="botao-votar" onclick="votar('mv');verificarVotos();">MARVEL</button>
+        <button class="botao-votar" onclick="votar('dc');verificarVotos();">DC</button>
+        <button class="botao-votar" onclick="obterVotacao();abrirResultados();">RESULTS</button>
+       </div> 
+
+    </div>
+</body>
+</html>
