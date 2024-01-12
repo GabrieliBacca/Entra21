@@ -9,7 +9,7 @@ body{
 .grid-votos {
     display: grid;
     grid-template-areas: 'dbz naruto';
-    grid-template-columns: 50% 50%;
+    /* grid-template-columns: 50% 50%; */
     gap: 0%;
     font-size: 100%;
     text-align: center;
@@ -32,11 +32,11 @@ body{
     /* margin-top: 150px; */
 }
 
-.anime-naruto {
+.marvel {
     flex-grow: 1;
     flex-basis: 200;
     height: 100%;
-    background-color: rgb(9, 245, 135);
+    background-color: #3027A5;
     color: white;
     grid-area: naruto;
     margin: center;
@@ -46,11 +46,11 @@ body{
 
 }
 
-.anime-dbz {
+.dc {
     flex-grow: 1;
     /* flex-basis: 200;
     height: 100%; */
-    background-color: orangered;
+    background-color: #33738D;
     color: white;
     grid-area: dbz;
     margin: center;
@@ -102,8 +102,8 @@ body{
 .botao-menu {
     width: 180px;
     height: 60px;
-    background-color: #000;
-    color: orange;
+    background-color: #02001A;
+    color: #92BECA;
     border: none;
     cursor: pointer;
     border-bottom-left-radius: 60px;
@@ -114,6 +114,6 @@ body{
 }
 
 .botao-menu:hover {
-    background-color: orange;
-    color: #000;
+    background-color: #92BECA;
+    color: #02001A;
 }

@@ -1,8 +1,3 @@
-// function atualizarPorcentagens() {
-//   obterPorcentagemDBZ();
-//   obterPorcentagemNaruto();
-// }
-
 // Função para atualizar a largura das seções de votos
 async function atualizarLarguraSecoes() {
   try {

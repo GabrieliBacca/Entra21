@@ -1,15 +1,16 @@
-/* MUDAR CORES */
 body, html {
     height: 100%;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .titulo {
     margin-bottom: 30px;
     font-size: 28px;
+    color: #02001A;
 }
 .imagem{
     width: 100vw;
@@ -27,8 +28,8 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    background-color: #E1F2FA;
+    box-shadow: 0 0 10px #02001A;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -44,13 +45,12 @@ body, html {
     font-size: 20px;
     border-radius: 50px;
     cursor: pointer;
-    background-color: #3498db;
+    background-color: #276A81;
     color: #fff;
     box-shadow: 5px 5px 8px rgb(146, 145, 144);
-    border: 1px solid black;
+    border: 1px solid #02001A;
 }
 
-.botao-votar:hover {
-    background-color: #0a1a24;
+:hover.botao-votar{
+    background-color: #001D27;
 }
-
