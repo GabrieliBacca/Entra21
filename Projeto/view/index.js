@@ -1,53 +1,70 @@
-
-// fetch('http://localhost:3000/filme').then(dados => dados.json())
-
 fetch('http://localhost:3000/votacao').then(votos => votos.json())
 
-//envia voto para API
-async function votar(universo){
-    try{
-        const response = await fetch('http://localhost:3000/votar',{
+let votacaoAtual = 0
+
+// Função assíncrona para obter a contagem atual de votos do servidor.
+async function obterVotacao() {
+    try {
+        // Realiza uma requisição assíncrona usando o método fetch para o endpoint '/votacao'.
+        const response = await fetch('http://localhost:3000/votacao');
+        console.log(response)
+        const votos = await response.json();
+        console.log('Votação:', votos);
+
+        // Atualiza a variável local 'votacaoAtual' com a contagem total de votos.
+        votacaoAtual = votos.total
+        verificarVotos();
+
+    } catch (error) {
+        console.error('Erro ao obter a votação:', error);
+    }
+
+}
+
+// Enviar um voto para a API
+async function votar(universo) {
+    try {
+        const response = await fetch('http://localhost:3000/votar', {
             method: 'POST',
-            headers:{
-                'Content-Type': 'aplication/json'
+            headers: {
+                'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ [universo]: 1})
-        })
-        const data = await response.json()
-        alert('Voto inserido com sucesso!')
-        votos +=1
-        verificarVotos() //ele ja chama o verificar no index.html, pq chamar aqui tambem? VERIFICAR
-    }catch (error){
-        alert('Erro ao votar', error)
+            body: JSON.stringify({ [universo]: 1 })
+        });
+        const data = await response.json();
+        alert('Voto computado com sucesso!')
+        votos += 1
+        verificarVotos();
+    } catch (error) {
+        console.log('Erro ao votar:', error);
+    }
+}
+
+async function resetar() {
+    try {
+        const response = await fetch('http://localhost:3000/reset', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+        const data = await response.json();
+        console.log('Contagem de votos reiniciada:', data);
+
+    } catch (error) {
+        console.error('Erro ao reiniciar a votação:', error);
     }
 }
 
 // Função para verificar se existem votos computados e exibir o botão de resultado
-async function verificarVotos(){
-    if(votos>0){
-        document.getElementById('resultado').style.display = 'block'
+function verificarVotos() {
+    if (votos > 0) {
+        document.getElementById('resultado').style.display = 'block';
     }
 }
 
-// ver se consigo faxzer de outra forma
-function abrirResultados(){
-    window.location.href = 'resultados.html'
-}
-
-//Conseguir a contagem atual da votação
-let votacaoAtual = 0
-async function obterVotacao(){
-    try{
-        const response = await fetch('http://localhost:3000/votacao')
-        console.log(response)
-        const data = await response.json()
-        console.log('Contagem atual da votação', data)
-        votacaoAtual = data.total
-        verificarVotos() //VERIFICAR SE PRECISA AQUI
-
-    }catch(error){
-        console.log('Erro ao obter votacso: ', error)
-    }
+function abrirResultados() {
+    window.location.href = "resultados.html";
 }
 
 function voltarVotar() {

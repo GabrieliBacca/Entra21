@@ -12,7 +12,25 @@
 <body onload="atualizarLarguraSecoes()">
 
     <div class="container-resultados">
-        
+        <nav class="menu">
+            <!-- esse id é necessario? -->
+            <button class="botao-menu" id="Votar" onclick="voltarVotar()">Votar</button> 
+            <button class="botao-menu" onclick="obterVotacao(); atualizarLarguraSecoes()">Atualizar</button>
+            <button class="botao-menu" onclick="resetar()">Reiniciar</button>
+        </nav>
+
+        <div class="grid-votos" id="votos">
+            <div class="anime-dbz" id="secao-dbz">DBZ
+                <h2 id="por-dbz" class="por-dbz"></h2>
+                <!-- PRECISA DO H2? -->
+            </div>
+
+            <div class="anime-naruto" id="secao-naruto">Naruto
+                <h2 id="por-naruto" class="por-naruto"></h2>
+                <!-- PRECISA DO H2? -->
+            </div>
+
+        </div>
     </div>
     
 </body>

@@ -1,0 +1,119 @@
+/* MUDAR TODO O CSS */
+html,
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.grid-votos {
+    display: grid;
+    grid-template-areas: 'dbz naruto';
+    grid-template-columns: 50% 50%;
+    gap: 0%;
+    font-size: 100%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.por-naruto {
+    font-display: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    /* margin-top: 150px; */
+}
+
+.por-dbz {
+    font-display: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    /* margin-top: 150px; */
+}
+
+.anime-naruto {
+    flex-grow: 1;
+    flex-basis: 200;
+    height: 100%;
+    background-color: rgb(9, 245, 135);
+    color: white;
+    grid-area: naruto;
+    margin: center;
+    text-align: center;
+    font-size: 90px;
+    padding: 0px;
+
+}
+
+.anime-dbz {
+    flex-grow: 1;
+    /* flex-basis: 200;
+    height: 100%; */
+    background-color: orangered;
+    color: white;
+    grid-area: dbz;
+    margin: center;
+    text-align: center;
+    font-size: 90px;
+    padding: 0px;
+
+}
+
+
+.scale-up-hor-rightt {
+    animation: scaleUpHorRightt 0.8s ease-out forwards;
+}
+
+.scale-up-hor-leftt {
+    animation: scaleUpHorLeftt 0.8s ease-out forwards;
+}
+
+@keyframes scaleUpHorRightt {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes scaleUpHorLeftt {
+    from {
+        transform: scaleX(2);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.botao-menu {
+    width: 180px;
+    height: 60px;
+    background-color: #000;
+    color: orange;
+    border: none;
+    cursor: pointer;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.botao-menu:hover {
+    background-color: orange;
+    color: #000;
+}
