@@ -1,65 +1,42 @@
-/* MUDAR TODO O CSS */
 html,
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
 }
+
 .grid-votos {
     display: grid;
-    grid-template-areas: 'dbz naruto';
-    /* grid-template-columns: 50% 50%; */
-    gap: 0%;
     font-size: 100%;
+} 
+
+.marvel {
+    background-color: #3027A5;
+    color: white;
+    font-size: 50px;
+    padding: 0px;
+    height: 100vh; 
+    display: flex;
     text-align: center;
     align-items: center;
-    align-content: center;
+    flex-direction: column;
     justify-content: center;
 }
 
-.por-naruto {
-    font-display: center;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 10px;
-    /* margin-top: 150px; */
-}
-
-.por-dbz {
-    font-display: center;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 10px;
-    /* margin-top: 150px; */
-}
-
-.marvel {
-    flex-grow: 1;
-    flex-basis: 200;
-    height: 100%;
-    background-color: #3027A5;
-    color: white;
-    grid-area: naruto;
-    margin: center;
-    text-align: center;
-    font-size: 90px;
-    padding: 0px;
-
-}
-
 .dc {
-    flex-grow: 1;
-    /* flex-basis: 200;
-    height: 100%; */
     background-color: #33738D;
     color: white;
-    grid-area: dbz;
-    margin: center;
     text-align: center;
-    font-size: 90px;
+    font-size: 50px;
     padding: 0px;
-
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
-
 
 .scale-up-hor-rightt {
     animation: scaleUpHorRightt 0.8s ease-out forwards;
@@ -87,9 +64,9 @@ body{
     to {
         transform: scaleX(1);
     }
-}
+} 
 
-
+/* MENU */
 .menu {
     display: flex;
     justify-content: space-between;
@@ -116,4 +93,5 @@ body{
 .botao-menu:hover {
     background-color: #92BECA;
     color: #02001A;
-}
+} 
+

@@ -15,8 +15,8 @@ async function atualizarLarguraSecoes() {
     gridVotos.style.gridTemplateColumns = `${porcentagemDC}% ${porcentagemMarvel}%`;
     gridVotos.style.fontSize = `${porcentagemDC}px ${porcentagemMarvel}px`;
 
-    const porMarvel = document.getElementById("por-naruto");
-    const porDC = document.getElementById("por-dbz");
+    const porMarvel = document.getElementById("porcentagem-marvel");
+    const porDC = document.getElementById("porcentagem-dc");
 
     porMarvel.innerText = `${porcentagemMarvel}%`;
     porDC.innerText = `${porcentagemDC}%`;
@@ -25,10 +25,11 @@ async function atualizarLarguraSecoes() {
   }
 }
 
+
 // Define a classe de animação com base nos votos
 async function aplicarAnimacao() {
-  const secaoDC = document.getElementById('secao-dbz');
-  const secaoMarvel = document.getElementById('secao-naruto');
+  const secaoDC = document.getElementById('secao-dc');
+  const secaoMarvel = document.getElementById('secao-marvel');
 
   try {
     const respostaVotacao = await fetch('http://localhost:3000/votacao');
@@ -57,23 +58,3 @@ async function aplicarAnimacao() {
     console.error('Erro ao aplicar a animação:', error);
   }
 }
-
-async function resetar() {
-  try {
-    const response = await fetch('http://localhost:3000/reset', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    });
-    const data = await response.json();
-    console.log('Contagem de votos reiniciada:', data);
-
-    // Chama a função para atualizar as porcentagens na interface
-    atualizarPorcentagens();
-
-  } catch (error) {
-    console.error('Erro ao reiniciar a votação:', error);
-  }
-}
-
