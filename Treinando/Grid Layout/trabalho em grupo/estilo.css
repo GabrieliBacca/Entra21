@@ -1,0 +1,103 @@
+.cabecalho{
+    background-color:#475BAD;
+    display: flex;
+    justify-content: space-between;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 999;
+	 
+}
+
+.lista{
+    background-color: #ffffff;
+    font-family:monospace;
+    border-radius: 5px;
+    font-size: 20px;
+	margin-right: 30px;
+	
+}
+
+.texto {
+	margin-top: 30px;
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+.destaque {
+	font-weight: bold;
+}
+
+html {
+	marign: 0;
+	 
+}
+.grid {
+	display: grid;
+}
+
+.grid-template-columns {
+	grid-template-columns: 200px 200px;
+}
+
+.grid-template-columns-3 {
+	grid-template-columns: 1fr 2fr 1fr;
+}
+
+.subgrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+
+.subgrid > div {
+	background: rgba(0,0,0,.3);
+}
+
+/* Estilos Gerais */
+.item {
+	margin: 10px;
+	background: rgb(255, 179, 39);
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.grid {
+	max-width: 400px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+
+h1 {
+	text-align: center;
+	font-size: 23px;
+	font-weight: normal;
+}
+p {
+	text-align: center;
+	font-size: 23px;
+}
+
+.textoimportante {
+font-size: 30px;
+}
+
+.textosuimportante {
+    font-size: 25px;
+    }
+
+body {
+	font-family: monospace;
+	color: #37373a;
+    background-color: rgb(216, 216, 216);
+	margin: 0px;
+	padding-bottom: 60px;
+}
+
+body > div {
+	padding: 40px 0;
+}
+
+body > div:nth-of-type(even) {
+	background: rgba(0,0,0,.03);
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.ingrid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+  align-items: center;
+  
+}
+
+.ingrid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  
+}
+</style>
+</head>
+<link rel="stylesheet" href="estilo.css">
+<body>
+    <header class= "cabecalho">
+        <h1></h1>
+        <a class= lista href="index2.html">Exemplo 2</a>
+        <a class= lista href="index3.html">Exemplo 3</a>
+        <a class= lista href="index4.html">Exemplo 4</a>
+        <a class= lista href="index.html">Exemplo 1</a>
+    </ul>
+    </header>
+    
+<h1 class="texto destaque">Grid Elements</h1>
+
+<p class="texto">Grid Layout deve ter um <span class="destaque">elemento pai (container)</span> com a propriedade <em class="destaque">display</em> definida para <em class="destaque">grid</em> ou <em class="destaque">inline-grid</em>.</p>
+
+<p class="texto">Os elementos <em class="destaque">filhos</em> do grid container automaticamente serão <em class="destaque">grid items</em>.</p>
+
+<p class="texto">Grid Layout usando <span class="destaque">display: grid</span>, exemplo:</p>
+<div class="grid-container">
+  <div class="grid-item">batata</div>
+  <div class="grid-item">picles</div>
+  <div class="grid-item">maçã</div>  
+  <div class="grid-item">banana</div>
+  <div class="grid-item">laranja</div>
+  <div class="grid-item">limão</div>  
+  <div class="grid-item">hortelã</div>
+  <div class="grid-item">tomate</div>
+  <div class="grid-item">cebola</div>  
+</div>
+<p class="texto">Grid Layout usando <span class="destaque">display: inline-grid</span>, exemplo:</p>
+<div class="grid-container">
+<div class="ingrid-container">
+  <div class="ingrid-item">batata</div>
+  <div class="ingrid-item">picles</div>
+  <div class="ingrid-item">maçã</div>  
+  <div class="ingrid-item">banana</div>
+  <div class="ingrid-item">laranja</div>
+  <div class="ingrid-item">limão</div>  
+  <div class="ingrid-item">hortelã</div>
+  <div class="ingrid-item">tomate</div>
+  <div class="ingrid-item">cebola</div>  
+</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+.container {
+    display: grid;  /*  grid(tabela) inline-grid(linha) */
+    grid-template-columns: auto  auto auto ; /* Define o número total de colunas que serão criadas no grid. */
+    grid-template-rows:  100px 100px;/* Define a quantidade de linhas no grid.*/
+    gap: 5px;
+    background-color: #2196F3;
+    padding: 10px;
+
+    grid-template-areas:; /* Define áreas específicas no grid. O ponto (.) pode ser utilizado para criar áreas vazias.*/
+    grid-template: ; /* Atalho para definir o grid-template-columns, grid-template-rows e grid-template-areas.*/
+    grid-auto-columns: ; /* Define o tamanho das colunas do grid implícito (gerado automaticamente, quando algum elemento é posicionado em uma coluna que não foi definida).*/
+    grid-auto-rows: ; /* Define o tamanho das linhas do grid implícito (gerado automaticamente, quando algum elemento é posicionado em uma linha que não foi definida).*/
+    grid-auto-flow: ; /* Define o fluxo dos itens no grid. Se eles vão automaticamente gerar novas linhas ou colunas.*/
+    grid:  80px / 1fr 1fr; /*Define o gap (gutter) entre os elementos do grid.*/
+    justify-content:  ; /* Justifica os itens do grid em relação ao eixo x (horizontal).*/
+    align-content:  ; /* Alinha os itens do grid em relação ao eixo y (vertical). */
+    justify-items: ; /*Justifica o conteúdo dos itens do grid em relação ao eixo x (horizontal). Justifica em relação a célula.*/
+    align-items: center; /* Alinha o conteúdo dos itens do grid em relação ao eixo y (vertical). Alinha em relação a célula.*/
+
+
+
+  }
+  
+  .itens {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    
+  }
+
+  .itens:nth-child(1) {
+    border-radius: 10%;
+    background-color: red;
+    /* grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+  }
+
+  .itens:nth-child(3) {
+    border-radius: 10%;
+    grid-column: 3;  /* Define quais colunas serão ocupadas pelo grid item. É possível definir uma linha de início e final, assim o item irá ocupar múltiplas colunas. */
+    grid-row: 1; /* Define quais linhas serão ocupadas pelo grid item. Atenção aqui, pois esse linha é referente a row. Porém as chamadas grid lines que por tradução também significam linhas do grid, são diferentes. Uma row (linha), possui sempre 2 grid lines (linhas do grid), uma no início dela e uma no final dela. */
+    grid-area: ; /* Define a área do item do grid. É um atalho para grid-row-start, grid-column-start, grid-row-end, grid-column-end. O z-index pode ser utilizado para manipular a posição no eixo Z do item. Ou seja, se um item for posicionado em cima de outro, o z-index controla qual vêm na frente. */
+    justify-self: auto ; /* Justifica o item do grid em relação ao eixo x (horizontal). Justifica em relação a célula. */
+    align-self: auto ; /* Justifica o item do grid em relação ao eixo y (vertical). Alinha em relação a célula. */
+  }
+
+  

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+</head>
+<link rel="stylesheet" href="estilo.css">
+<body>
+    <header class= "cabecalho">
+        <h1></h1>
+        <a class= lista href="index2.html">Exemplo 2</a>
+        <a class= lista href="index3.html">Exemplo 3</a>
+        <a class= lista href="index4.html">Exemplo 4</a>
+        <a class= lista href="index5.html">Exemplo 5</a>
+    </ul>
+    </header>
+<div>
+    
+    <h1 class="textoimportante"><em>Grid Layout</em></h1>
+    <h1 class="textosubimportante">Grid Layout é uma função muito útil do HTML e CSS, 
+        ajuda com a separação de informações para facilitar a visualização das informações
+    ao usuário.</h1>
+
+    <div>
+
+        <style>
+            .item1 { grid-area: cabecario; }
+            .item2 { grid-area: menu; }
+            .item3 { grid-area: principal; }
+            .item4 { grid-area: direita; }
+            .item5 { grid-area: rodapé; }
+            
+            .grid-container {
+              display: grid;
+              grid-template-areas:
+                'cabecario cabecario cabecario cabecario cabecario cabecario'
+                'menu principal principal direita direita direita'
+                'menu rodapé rodapé rodapé rodapé rodapé';
+              gap: 10px;
+              background-color: #2196F3;
+              padding: 10px;
+            }
+            
+            .grid-container > div {
+              background-color: rgba(255, 255, 255, 0.8);
+              text-align: center;
+              padding: 20px 0;
+              font-size: 30px;
+            }
+            </style>
+            </head>
+            <body>
+            
+            <p class="textosubimportante">Esse módulo, oferece linhas e colunas, facilitando a criação de páginas sem usar, "Float" e "Positioning" por exemplo.</p>
+            
+            <div class="grid-container">
+              <div class="item1">Cabeçário</div>
+              <div class="item2">Menu</div>
+              <div class="item3">Principal</div>  
+              <div class="item4">Direita</div>
+              <div class="item5">Rodapé</div>
+            </div>
+
+            
+        <!-- display: block; -->
+        <h1>Exemplo de Coluna básica</h1> 
+        <section class="grid">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </section>
+        </div>
+        
+        <div>
+            <!-- grid-template-columns: 200px 200px; -->
+        <h1>Exemplo de uma Coluna Dupla.</h1>
+        <section class="container grid grid-template-columns">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </section>
+        </div>
+        
+        <div>
+            <!-- grid-template-columns: 1fr 2fr 1fr; -->
+        <h1>Exemplo de uma coluna tripartida.</h1>
+        <section class="container grid grid-template-columns-3">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </section>
+        </div>
+        
+        <div>
+            <!-- subgrid -->
+        <h1>Exemplo de uma coluna tripartida, com subseções separadas.</h1>
+        <section class="container grid grid-template-columns-3">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item subgrid">
+                <div>5.1</div>
+                <div>5.2</div>
+                <div>5.3</div>
+            </div>
+            <div class="item">6</div>
+        </section>
+        </div>
+</div>
+</body>
+</html>

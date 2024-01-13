@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="estilo4.css">
+<script defer src="script.js"></script>
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+<body>
+    <header class= "cabecalho">
+        <h1></h1>
+        <a class= lista href="index2.html">Exemplo 2</a>
+        <a class= lista href="index3.html">Exemplo 3</a>
+        <a class= lista href="index.html">Exemplo 1</a>
+        <a class= lista href="index5.html">Exemplo 5</a>
+    </ul>
+    </header>
+    <br><br>
+
+
+    <div id="canvas">
+      <div id="canvas-left">
+        <div class="texture"></div>
+      </div>
+      <div id="canvas-back"></div>
+      <div id="grid" class="grid">
+        <span id="fallback">Teste <a href="http://caniuse.com/#feat=css-grid" target="_blank">support</a> CSS grids yet!</span>
+      </div>
+      <div class="texture" id="texture"></div>
+    
+      <button id="draw">
+        <span id="draw-top"></span>
+        <span id="draw-left"></span>
+        <span id="draw-back"></span>
+        <span>Criar outro</span>
+      </button>
+    
+      <div id="description">
+        <span id="description-top"></span>
+        <span id="description-left"></span>
+        <span id="description-back"></span>
+        <p class="author">Mondrian + CSS grid</p>
+        <p class="title">Untitled (Div's on DOM)</p>
+        <p class="year">2017. <a href="https://twitter.com/marco_ciampini" target="_blank" rel="noopener noreferrer">@marco_ciampini</a> for <a href="https://twitter.com/toasterco" target="_blank" rel="noopener noreferrer">@toasterco</a></p>
+       
+      </div>
+    </div>
+
+    <!-- <div id="grid-container" class="grid">
+      Conteúdo com código CSS Grid 
+      <div id="canvas">
+        <div id="canvas-left">
+          <div class="texture"></div>
+        </div>
+        <div id="canvas-back"></div>
+        <div id="grid" class="grid"> </div>
+        <div class="texture" id="texture"></div>
+      
+        <button id="draw">
+          <span id="draw-top"></span>
+          <span id="draw-left"></span>
+          <span id="draw-back"></span>
+          <span>Another one</span>
+        </button>
+      
+        <div id="description">
+          <span id="description-top"></span>
+          <span id="description-left"></span>
+          <span id="description-back"></span>
+         
+        </div>
+    </div>
+    
+    <!-- <script>
+    // Verifica se o navegador suporta CSS Grid
+    if (typeof CSS !== 'undefined' && CSS.supports('display', 'grid')) {
+      // O navegador suporta CSS Grid, então mantenha a classe "grid" no elemento pai
+    } else {
+      // O navegador não suporta CSS Grid, então remova a classe "grid" do elemento pai
+      var gridContainer = document.getElementById('grid-container');
+      gridContainer.classList.remove('grid');
+    }
+    </script> -->
+</body>
+</html>
