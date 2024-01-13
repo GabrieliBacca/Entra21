@@ -1,0 +1,35 @@
+Introdução:
+
+Pedro
+- Apresentação e explicação do que é o position
+- Destaque da importância do position na web
+- Explicar sobre as propriedade auxiliares: top, left, right, bottom
+- Explicar sobre z-index
+
+Parte prática:
+
+Artur/Pedro
+- Explicação de cada valor possível para o position: Static, Relative, Fixed, Sticky, Absolute
+
+Static - Pedro
+Relative - Artur
+Fixed - Pedro
+Sticky - Artur
+Absolute - Artur
+
+--- PRIMEIRO DESAFIO
+Faça 5 quadrados tendo cada um deles um position diferente e usando as quatro propriedades auxiliares
+
+--- SEGUNDO DESAFIO
+Criem uma estrutura HTML básica com um parágrafo
+
+usem CSS para criar um layout específico com base nas seguintes diretrizes:
+
+Selecione o parágrafo e defina-o como position: relative;
+Dentro desse parágrafo, coloque um elemento filho (por exemplo, uma imagem) e defina-o como position: absolute;
+Ajuste as propriedades auxiliares: top, right, bottom e left para posicionar o elemento filho dentro do elemento pai de acordo com um layout desejado
+Observe como o elemento posicionado afeta o fluxo do documento e como ele é removido do fluxo normal
+Peça aos alunos que documentem suas observações e descubram como o uso da propriedade position afeta o layout e a sobreposição de elementos
+
+--- TERCEIRO DESAFIO
+Crie uma Navbar com position fixed para que ela fique fixa no topo da página independente do scroll
