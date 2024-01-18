@@ -68,3 +68,4 @@ let registeredUser = {
     user: 'Gabi',
     password: '1234'
 };
+// 8) Crie uma função chamada calcularTotal que aceite um array de objetos do tipo Produto e retorne o valor total da compra.
