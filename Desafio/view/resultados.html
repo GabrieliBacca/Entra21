@@ -14,8 +14,8 @@
     <div class="container-resultados">
         <nav class="menu">
             <button class="botao-menu" id="Votar" onclick="voltarVotar()">Votar</button> 
-            <button class="botao-menu">Atualizar</button>
-            <button class="botao-menu">Reiniciar</button>
+            <button class="botao-menu" onclick='obterVotacao();atualizarLarguraSecoes()'>Atualizar</button>
+            <button class="botao-menu" onclick="resetar()">Reiniciar</button>
         </nav>
 
         <div class="grid-votos" id="votos">

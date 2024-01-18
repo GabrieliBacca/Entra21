@@ -70,3 +70,21 @@ function abrirResultados() {
 function voltarVotar() {
     window.location.href = "votar.html";
 }
+
+
+
+async function resetar() {
+    try {
+        const response = await fetch('http://localhost:3000/reset', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+        const data = await response.json()
+        console.log('Contagem de votos reiniciada:', data)
+
+    } catch (error) {
+        console.error('Erro ao reiniciar a votação:', error)
+    }
+}
