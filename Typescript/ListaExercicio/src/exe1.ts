@@ -1,18 +1,17 @@
 // 1) Crie uma função em TypeScript que receba dois parâmetros, ambos números, e retorne a soma desses números.
 
-function somar(num1: number, num2: number) :number{
+function somar(num1: number, num2: number): number {
     return num1 + num2
 }
-
-console.log(`Soma é igual: ${somar(2,6)}`)
+console.log(`Soma é igual: ${somar(2, 6)}`)
 
 
 // 2) Crie uma função que aceite um parâmetro que pode ser do tipo string ou number. 
 // Se o parâmetro for uma string, retorne a string concatenada com " - texto". 
 // Se for um número, retorne o dobro desse número.
 
-function verificarNumero(num: string | number) : number | string {
-    if(typeof num == 'string') return num + '-texto'
+function verificarNumero(num: string | number): number | string {
+    if (typeof num == 'string') return num + '-texto'
     else return num * 2
 }
 console.log(verificarNumero(5))
@@ -21,21 +20,21 @@ console.log(verificarNumero(5))
 // 3) Crie uma função chamada somaArray que aceite um array de números e retorne a soma deles.
 
 let soma = 0
-function somaArray(array: number[] )  : string {
-    for(let i=0; i < array.length; i++){
+function somaArray(array: number[]): string {
+    for (let i = 0; i < array.length; i++) {
         soma += array[i]
     }
     return `The sum of the numbers is ${soma}`
 }
 
-        // UTILIZANDO FOREACH
-function somaArray2(array: number[] )  : number {
-    let soma: number =0
-    array.forEach(num => soma +=num)
+// UTILIZANDO FOREACH
+function somaArray2(array: number[]): number {
+    let soma: number = 0
+    array.forEach(num => soma += num)
     return soma
 }
 
-let numbers = [1,2,3]
+let numbers = [1, 2, 3]
 console.log(somaArray(numbers))
 
 
@@ -45,21 +44,21 @@ type frutas = {
     nome: string
 }
 
-function imprimirFrutas(fruta : frutas[]) : void {
-    for(let i =0; i< fruta.length; i++){
+function imprimirFrutas(fruta: frutas[]): void {
+    for (let i = 0; i < fruta.length; i++) {
         console.log(fruta[i].nome)
     }
 }
 
-let arrayFrutas : frutas[]= [
-    {nome: 'maca'}, {nome: 'caqui', }, {nome: 'banana'}
+let arrayFrutas: frutas[] = [
+    { nome: 'maca' }, { nome: 'caqui', }, { nome: 'banana' }
 ]
 
 imprimirFrutas(arrayFrutas)
 
+
 // 5) Declare um enum chamado DiasDaSemana com os dias da semana como membros.
 // Crie uma função que aceite um parâmetro do tipo DiasDaSemana e retorne uma mensagem relacionada ao dia.
-
 enum DiasDaSemana {
     Segunda = 'Boa Segunda guys',
     Terca = 'Terça rapazes',
@@ -72,7 +71,7 @@ enum DiasDaSemana {
 }
 
 function daysOfWeek(dia: DiasDaSemana) {
-   console.log(dia)
+    console.log(dia)
 }
 daysOfWeek(DiasDaSemana.Segunda)
 
@@ -103,12 +102,40 @@ type Usuario = {
     password: string
 }
 
-let registeredUser ={
+let registeredUser = {
     user: 'Gabi',
     password: '1234'
 }
 
-function verificarUsuario()
+function verificarUsuario(user: string, password: string): boolean {
+    if (user == registeredUser.user && registeredUser.password == password) return true
+    return false
+}
 
+console.log(verificarUsuario('Gabi', '65'))
 
 // 8) Crie uma função chamada calcularTotal que aceite um array de objetos do tipo Produto e retorne o valor total da compra.
+
+type Produto = {
+    nome: string,
+    preco: number,
+    quantidade: number
+};
+
+function calcularTotal(produtos: Produto[]) : number {
+    let valorTotal = 0
+
+    for (let i = 0; i < produtos.length; i++) {
+        valorTotal += produtos[i].preco * produtos[i].quantidade
+    }
+
+    return valorTotal
+}
+
+const produtos: Produto[] = [
+    { nome: 'Banana', preco: 10, quantidade: 2 },
+    { nome: 'Calça', preco: 5, quantidade: 3 },
+    { nome: 'Garrafa', preco: 8, quantidade: 1 }
+];
+
+console.log('Valor total da compra:', calcularTotal(produtos));

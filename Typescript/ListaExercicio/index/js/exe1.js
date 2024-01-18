@@ -68,4 +68,22 @@ let registeredUser = {
     user: 'Gabi',
     password: '1234'
 };
-// 8) Crie uma função chamada calcularTotal que aceite um array de objetos do tipo Produto e retorne o valor total da compra.
+function verificarUsuario(user, password) {
+    if (user == registeredUser.user && registeredUser.password == password)
+        return true;
+    return false;
+}
+console.log(verificarUsuario('Gabi', '65'));
+function calcularTotal(produtos) {
+    let valorTotal = 0;
+    for (let i = 0; i < produtos.length; i++) {
+        valorTotal += produtos[i].preco * produtos[i].quantidade;
+    }
+    return valorTotal;
+}
+const produtos = [
+    { nome: 'Banana', preco: 10, quantidade: 2 },
+    { nome: 'Calça', preco: 5, quantidade: 3 },
+    { nome: 'Garrafa', preco: 8, quantidade: 1 }
+];
+console.log('Valor total da compra:', calcularTotal(produtos));
