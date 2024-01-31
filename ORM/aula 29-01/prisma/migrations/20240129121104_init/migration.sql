@@ -3,7 +3,7 @@ CREATE TABLE "Author" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" DATETIME NOT NULL,
-    "firstName" TEXT NOT NULL,
+    "firsName" TEXT NOT NULL,
     "lastName" TEXT NOT NULL
 );
 

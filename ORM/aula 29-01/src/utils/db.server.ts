@@ -1,4 +1,3 @@
-// Setap Database
 import { PrismaClient } from "@prisma/client";
 
 let db: PrismaClient;
@@ -14,4 +13,6 @@ if (!global.__db) {
 db = global.__db
 
 export { db }
+
+
 

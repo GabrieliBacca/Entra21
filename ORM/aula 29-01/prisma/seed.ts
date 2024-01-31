@@ -1,23 +1,24 @@
+import { Prisma } from "@prisma/client";
 import { db } from "../src/utils/db.server";
 
+
 type Author = {
-    firstName: string,
-    lastName: string
-}
+    firsName: string;
+    lastName: string;
+};
 
 type Book = {
-    title: string
-    isFiction: boolean
+    title: string;
+    isFiction: boolean;
     datePublished: Date
-}
-
+};
 
 async function seed() {
     await Promise.all(
         getAuthors().map((author) => {
             return db.author.create({
                 data: {
-                    firstName: author.firstName,
+                    firsName: author.firsName,
                     lastName: author.lastName
                 }
             })
@@ -25,10 +26,9 @@ async function seed() {
     )
     const author = await db.author.findFirst({
         where: {
-            firstName: "Maria"
+            firsName: "Maria"
         }
     })
-
 
     await Promise.all(
         getBooks().map((book) => {
@@ -43,42 +43,42 @@ async function seed() {
         })
     )
 }
-seed()
-
+seed();
 
 function getAuthors(): Array<Author> {
     return [
         {
-            firstName: 'Jana',
-            lastName: 'Bana'
+            firsName: 'Maria',
+            lastName: 'Marçal'
         },
         {
-            firstName: 'Panca',
-            lastName: 'Bacana'
+            firsName: 'Jananina',
+            lastName: 'Janaria'
         },
         {
-            firstName: 'Paulinho',
-            lastName: 'Mocelin'
-        }
+            firsName: 'Paulo',
+            lastName: 'Paulino'
+        },
     ]
 }
 
 function getBooks(): Array<Book> {
     return [
         {
-            title: 'guia sobrevivencia',
+            title: 'As aventuras de tiko e teko',
             isFiction: true,
             datePublished: new Date(),
         },
         {
-            title: 'como treinar seu programador',
+            title: 'Como treinar seu programador',
             isFiction: false,
             datePublished: new Date(),
         },
         {
-            title: 'harry pota',
+            title: 'Guia de sobrevivência do mochileiro de Blumenau',
             isFiction: true,
             datePublished: new Date(),
-        }
+        },
     ]
 }
+

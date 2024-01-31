@@ -1,44 +1,42 @@
-import { PrismaClient } from '@prisma/client'
-import { get } from 'http'
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient()
 
 type AuthorDTO = {
-    firstName: string,
+    firsName: string,
     lastName: string
 }
 
-async function AddNewAuthor(authorDTO: AuthorDTO) {
+async function AddNewAuthor($authorDTO: AuthorDTO) {
     const author = await prisma.author.create({
-        data: authorDTO
+        data: $authorDTO
     })
     console.log(author)
 }
 
-// let author1: AuthorDTO = {
-//     firstName: 'Ligia',
+// let autor1: AuthorDTO = {
+//     firsName: 'Ligia',
 //     lastName: 'Labravanel'
 // }
-// AddNewAuthor(author1)
+// AddNewAuthor(autor1)
 
-async function getAllAuthor() {
+async function getAuthors() {
     const authors = await prisma.author.findMany()
     console.log(authors)
 }
 
-getAllAuthor()
-
-async function getAuthorById(authorId: number) {
+async function getAuthorById(id: number) {
     const author = await prisma.author.findUnique({
         where: {
-            id: authorId
+            id: id
         }
     })
-    if (author == null) console.log('Autor não encontrado')
-    else console.log(author)
+    if (author == null) {
+        console.log('Autor nao encontrado')
+    } else {
+        console.log(author)
+    }
 }
-
-getAuthorById(2)
 
 async function deleteAuthor(id: number) {
     const author = await prisma.author.delete({
@@ -46,10 +44,12 @@ async function deleteAuthor(id: number) {
             id: id
         }
     })
-    if (author == null) console.log('Autor não encontrado')
-    else console.log('Autor deletado com sucesso')
+    if (author == null) {
+        console.log('Autor nao encontrado')
+    } else {
+        console.log('Autor deletado com sucesso')
+    }
 }
-
 async function updateAuthor(id: number, authorDTO: AuthorDTO) {
     const author = await prisma.author.update({
         where: {
@@ -57,18 +57,19 @@ async function updateAuthor(id: number, authorDTO: AuthorDTO) {
         },
         data: authorDTO
     })
-    if (author == null) console.log('Autor não encontrado')
-    else console.log('Autor atualizado com sucesso' + author)
+    if (author == null) {
+        console.log('Autor nao encontrado')
+    } else {
+        console.log('Autor atualizado com sucesso: ' + (author))
+    }
 }
 
-
-// add a new book
-type BookDto = {
-    title: string
+type AddBookDto = {
+    title: string,
     isFiction: boolean
-    datePublished: Date
+    datePublished: Date,
 }
-async function addNewBook($book: BookDto, $authorId: number) {
+async function addNewBook($book: AddBookDto, $authorId: number) {
     const book = await prisma.book.create({
         data: {
             title: $book.title,
@@ -82,15 +83,14 @@ async function addNewBook($book: BookDto, $authorId: number) {
         }
     })
 }
-
-let livro: BookDto = {
-
-    title: 'Harry',
+let livro: AddBookDto = {
+    title: 'Senhor dos Colares',
     isFiction: true,
-    datePublished: new Date
-
+    datePublished: new Date(),
 }
+
 addNewBook(livro, 1)
+
 
 async function getBookById(id: number) {
     const book = await prisma.book.findUnique({
@@ -101,4 +101,14 @@ async function getBookById(id: number) {
             author: {}
         }
     })
+    // const bookDto = {
+    //     title: book?.title,
+    //     author: {
+    //         authorId: book?.authorId,
+    //         firstName: book?.author.firsName,
+    //         lastName: book?.author.lastName,
+    //     }
+    // }
+    console.log(book)
 }
+getBookById(1);
