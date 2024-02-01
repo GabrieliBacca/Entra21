@@ -31,3 +31,45 @@ authorRouter.get("/:id", async (request: Request, response: Response) => {
         return response.status(500).json(erro.message)
     }
 })
+
+authorRouter.post('/',
+    body("firsName").isString(),
+    body("lastName").isString(),
+    async (request: Request, response: Response) => {
+        try {
+            const author = request.body
+            const newAuthor = await AuthorService.createAuthor(author)
+            return response.status(201).json(newAuthor)
+        } catch (erro: any) {
+            return response.status(500).json(erro.message)
+        }
+
+    })
+
+
+authorRouter.put('/:id',
+    body("firsName").isString(),
+    body("lastName").isString,
+    async (request: Request, response: Response) => {
+        try {
+            const author = request.body
+            const id = parseInt(request.params.id)
+            const updateAuthor = await AuthorService.updateAuthor(author, id)
+            return response.status(201).json(updateAuthor)
+        } catch (erro: any) {
+            return response.status(500).json(erro.message)
+        }
+    }
+)
+
+authorRouter.delete('/:id',
+    async (request: Request, response: Response) => {
+        try {
+            const id = parseInt(request.params.id)
+            await AuthorService.deleteAuthor(id)
+            return response.status(204).send()
+        } catch (erro: any) {
+            return response.status(500).json(erro.message)
+        }
+    }
+);
