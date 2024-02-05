@@ -8,7 +8,10 @@ const app = Vue.createApp({
             books: [
                 { title: "Procurando Harry", author: "LK" },
                 { title: "Procurando percy", author: "JK" },
-            ]
+            ],
+            num1: 0,
+            num2: 0,
+            resultado: 0
         }
     },
     methods: {
@@ -17,6 +20,10 @@ const app = Vue.createApp({
         },
         handleEvent() {
             console.log('envente')
+        },
+        somar(){
+            this.resultado = parseFloat(this.num1) + parseFloat(this.num2);
+            console.log(this.resultado)
         }
     }
 })
