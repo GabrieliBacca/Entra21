@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="main.js" defer></script>
+</head>
+<style>
+    .box {
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background-color: #ddd;
+        margin: 20px;
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <!-- EXEMPLO 1 -->
+    <!-- <div id="app">
+        <h1>Titulo: {{title}}</h1>
+        <h1>Autor: {{author}}</h1>
+        <h1>Idade: {{idade}}</h1>
+
+        <button v-on:click="idade++">Aumentar Idade</button>
+        <button v-on:click="idade--">Diminuir Idade</button>
+        <div @click="title = 'Mudando pela div' ">Mudar titulo do livro</div>
+        <div @click="changeTitle('oaudouad')">Mudar titulo do livro</div>
+    </div> -->
+
+
+    <!-- EXEMPLO 2 -->
+    <div id="app">
+        <div v-if="showBooks">
+            <ul>
+                <li v-for="book in books">
+                    <h3>{{book.title}}</h3>
+                    <p>{{book.author}}</p>
+                </li>
+            </ul>
+            <!-- <p>{{title}} - {{author}} - {{idade}} </p> -->
+        </div>
+        <button v-on:click="showBooks =! showBooks">
+            <span v-if="showBooks">Esconder Livros</span>
+            <span v-if="!showBooks">Mostrar Livros</span> <!-- Ou v-else -->
+        </button>
+
+        <br><br>
+
+        <!-- Mouse Events -->
+        <div class="box" @mouseover="handleEvent">mouseover(enter)</div>
+        <div class="box" @mouseleave="handleEvent">mouseleave</div>
+        <div class="box" @dblclick="handleEvent">double click</div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
