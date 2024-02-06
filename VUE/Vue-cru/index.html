@@ -17,6 +17,29 @@
         margin: 20px;
         display: inline-block;
     }
+
+    p,
+    h3,
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        background-color: #ddd;
+        margin: 20px auto;
+        padding: 10px 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .fav {
+        background-color: rgb(148, 199, 148);
+    }
 </style>
 
 <body>
@@ -35,35 +58,47 @@
 
 
     <!-- EXEMPLO 2 -->
-    <!-- <div id="app">
+    <div id="app">
+        <a v-bind:href="url">Clique aqui</a>
+
         <div v-if="showBooks">
             <ul>
-                <li v-for="book in books">
+                <!-- v-for="book in books" -->
+                <li v-for="book in filteredBooks" :class="{fav: book.isFav}">
                     <h3>{{book.title}}</h3>
                     <p>{{book.author}}</p>
+
+                    <div v-on:click="favoritar(book)">
+                        <span v-if="book.isFav">💛</span>
+                        <span v-else>🤍</span>
+                    </div>
+
+                    <img :src="book.img" alt="book.title" width="100px">
                 </li>
             </ul>
         </div>
         <button v-on:click="showBooks =! showBooks">
             <span v-if="showBooks">Esconder Livros</span>
-            <span v-if="!showBooks">Mostrar Livros</span> 
+            <span v-if="!showBooks">Mostrar Livros</span>
         </button>
 
-        <br><br> -->
+        <br><br>
 
         <!-- Mouse Events -->
-        <!-- <div class="box" @mouseover="handleEvent">mouseover(enter)</div>
+        <div class="box" @mouseover="handleEvent">mouseover(enter)</div>
         <div class="box" @mouseleave="handleEvent">mouseleave</div>
         <div class="box" @dblclick="handleEvent">double click</div>
         <div class="box"></div>
-    </div> -->
+    </div>
 
-    <div id="app">
+
+    <!-- CALCULADORA -->
+    <!-- <div id="app">
         <input type="number" v-model="num1" placeholder="Digite o primeiro número">
         <input type="number" v-model="num2" placeholder="Digite o segundo número">
         <button @click="somar">Somar</button>
         <p> {{ resultado }}</p>
-    </div>
+    </div> -->
 </body>
 
 </html>
