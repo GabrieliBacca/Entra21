@@ -24,11 +24,14 @@ h3,
 ul {
     margin: 0;
     padding: 0;
+
 }
 
 li {
+
     list-style: none;
-    background-color: #ddd;
+    background-color: #9677D9;
+    width: 400px;
     margin: 20px auto;
     padding: 10px 20px;
     border-radius: 10px;
