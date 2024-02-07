@@ -30,7 +30,9 @@ ul {
 li {
 
     list-style: none;
-    background-color: #9677D9;
+    background-color: rgb(252, 242, 242);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #789CB3;
     width: 400px;
     margin: 20px auto;
     padding: 10px 20px;
