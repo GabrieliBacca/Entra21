@@ -24,7 +24,7 @@
                 <div class="mb-3">
                     <label for="">Autor</label>
                     <select class="form-control" v-model="model.book.authorId">
-                        <option>
+                        <option selected>
                             {{ this.model.author.firstName + " " + this.model.author.lastName }}
                         </option>
                     </select>
@@ -54,7 +54,8 @@ export default {
                 author: {
                     firstName: "",
                     lastName: ""
-                }
+                },
+
             }
         }
     },
@@ -64,7 +65,11 @@ export default {
     },
     methods: {
         updateBook() {
-            axios.put()
+            let id = this.$route.params.id
+            axios.put(`http://localhost:8000/api/book/${id}`, this.model.book)
+                .then(res => {
+                    console.log(res)
+                })
         },
         getBook() {
             let id = this.$route.params.id

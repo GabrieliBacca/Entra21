@@ -80,6 +80,8 @@ export default {
             axios.delete(`http://localhost:8000/api/book/${id}`).then(res => {
                 console.log(res)
             })
+                .then(res => this.getBooks())
+
         }
     }
 }

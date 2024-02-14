@@ -1,0 +1,20 @@
+{
+    "book": [
+        {
+            "id": 1,
+            "title": "TEste teste",
+            "genero": "Terror"
+        },
+        {
+            "id": 2,
+            "title": "TEste teste",
+            "genero": "Terror"
+        },
+        {
+            "id": 3,
+            "title": "TEste teste",
+            "genero": "Terror"
+        }
+    ],
+    "aluno": []
+}
