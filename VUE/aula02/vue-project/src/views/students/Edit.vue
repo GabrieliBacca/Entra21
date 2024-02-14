@@ -2,7 +2,7 @@
     <div class="container mt-5">
         <div class="card">
             <div class="card-header">
-                <h1>Add Students</h1>
+                <h1>Edit Students {{ this.model.book.title }}</h1>
             </div>
 
             <div class="class-body">
@@ -43,12 +43,9 @@
 </template>
 
 <script>
-import axios from 'axios';
-
 export default {
     data() {
         return {
-            authors: [],
             model: {
                 book: {
                     title: "",
@@ -59,28 +56,9 @@ export default {
             }
         }
     },
-    methods: {
-        getAuthors() {
-            axios.get('http://localhost:8000/api/author').then(res => {
-                this.authors = res.data
-            })
-        },
-        saveBook() {
-            axios.post('http://localhost:8000/api/book', this.model.book).then(res => {
-                console.log(res)
-                alert(`${res.data.message} cadastrado com sucesso`)
-                this.model.book = {
-                    title: "",
-                    isFiction: true,
-                    datePublished: "",
-                    authorId: 0
-                }
-            })
-        }
-    },
     mounted() {
-        this.getAuthors();
-    }
+        console.log(this.$route.params.id)
+    },
 }
 </script>
 

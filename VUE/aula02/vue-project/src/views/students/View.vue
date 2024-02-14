@@ -18,14 +18,14 @@
                 </tr>
             </thead>
 
-            <tbody v-if="this.students.length > 0">
-                <tr v-for="(student, index) in this.students" :key="index">
-                    <td>{{ student.id }} </td>
-                    <td>{{ student.name }} </td>
-                    <td>{{ student.username }} </td>
-                    <td>{{ student.email }} </td>
+            <tbody v-if="this.books.length > 0">
+                <tr v-for="(book, index) in this.books" :key="index">
+                    <td>{{ book.id }} </td>
+                    <td>{{ book.name }} </td>
+                    <td>{{ book.username }} </td>
+                    <td>{{ book.email }} </td>
                     <td>
-                        <RouterLink to="/students/update" class="btn btn-success float-end">
+                        <RouterLink :to="{ path: `students/${book.id}/edit` }" class="btn btn-success float-end">
                             Editar
                         </RouterLink>
                         <button type="button" class="btn btn-danger float end">
@@ -49,22 +49,22 @@ import axios from 'axios'
 import { RouterLink } from 'vue-router'
 
 export default {
-    name: "students",
+    name: "books",
     //atributos
     data() {
         return {
-            students: []
+            books: []
         };
     },
     //executa oq eu quero na hora que é redenrizado(carregado), como um gatilho
     mounted() {
-        this.getStudents();
+        this.getBooks();
         console.log("rodou");
     },
     methods: {
-        getStudents() {
-            axios.get('https://jsonplaceholder.typicode.com/users').then(res => {
-                this.students = res.data;
+        getBooks() {
+            axios.get('http://localhost:8000/api/author').then(res => {
+                this.books = res.data;
                 //jogando os dados dentro da lista
             });
         }
